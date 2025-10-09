@@ -4,7 +4,6 @@
 #include <string>
 #include <vector>
 
-
 class Deck {
 protected:
     std::vector<Cards*> deckCards;
