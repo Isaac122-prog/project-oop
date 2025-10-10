@@ -7,7 +7,7 @@ class Damage_spell : public Spell {
     int Troops_Spawn, Trap;
 
     public:
-    Damage_spell(int Troops_Spawn, Trap);
+    Damage_spell(int Troops_Spawn, int Trap);
     int Get_Troops_Spawn() const;
     int Get_Trap() const;
 
