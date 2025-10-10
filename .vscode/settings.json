@@ -1,5 +1,6 @@
 {
     "files.associations": {
+<<<<<<< HEAD
         "__bit_reference": "cpp",
         "__locale": "cpp",
         "__split_buffer": "cpp",
@@ -10,10 +11,15 @@
         "cmath": "cpp",
         "cstdarg": "cpp",
         "cstddef": "cpp",
+=======
+        "__verbose_abort": "cpp",
+        "cmath": "cpp",
+>>>>>>> a8ce32ce12c7fd6e021dc31708399819dfcfa529
         "cstdint": "cpp",
         "cstdio": "cpp",
         "cstdlib": "cpp",
         "cstring": "cpp",
+<<<<<<< HEAD
         "ctime": "cpp",
         "cwchar": "cpp",
         "cwctype": "cpp",
@@ -35,4 +41,48 @@
         "vector": "cpp",
         "algorithm": "cpp"
     }
+=======
+        "cwchar": "cpp",
+        "cwctype": "cpp",
+        "initializer_list": "cpp",
+        "iosfwd": "cpp",
+        "limits": "cpp",
+        "new": "cpp",
+        "stdexcept": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "typeinfo": "cpp",
+        "vector": "cpp",
+        "__bit_reference": "cpp",
+        "__hash_table": "cpp",
+        "__locale": "cpp",
+        "__node_handle": "cpp",
+        "__split_buffer": "cpp",
+        "array": "cpp",
+        "bitset": "cpp",
+        "cctype": "cpp",
+        "clocale": "cpp",
+        "complex": "cpp",
+        "cstdarg": "cpp",
+        "ctime": "cpp",
+        "deque": "cpp",
+        "execution": "cpp",
+        "memory": "cpp",
+        "ios": "cpp",
+        "istream": "cpp",
+        "locale": "cpp",
+        "mutex": "cpp",
+        "optional": "cpp",
+        "print": "cpp",
+        "queue": "cpp",
+        "ratio": "cpp",
+        "sstream": "cpp",
+        "stack": "cpp",
+        "streambuf": "cpp",
+        "unordered_map": "cpp",
+        "variant": "cpp",
+        "algorithm": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
+>>>>>>> a8ce32ce12c7fd6e021dc31708399819dfcfa529
 }
