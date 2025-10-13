@@ -1,5 +1,6 @@
 #ifndef CARDS_H
 #define CARDS_H
+<<<<<<< HEAD
 #include <iostream>
 #include <string>
 
@@ -35,6 +36,22 @@ class Cards{
         void display() const;
 
         virtual ~Cards() = default;
+=======
+#include <string>
+
+class Cards {
+    private:
+    std::string Card_ID, Card_name, Rarity, Role;
+    int Elixir_cost, Health;
+
+    public:
+    std::string Get_Card_ID;
+    std::string Get_Card_name;
+    std::string Get_Rarity;
+    std::string Get_Role;
+    int Get_Elixir_cost;
+    int Get_Health;
+>>>>>>> 277870e63537a1b272b059d77d41513d6134ed54
 };
 
 #endif
