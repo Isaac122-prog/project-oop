@@ -2,7 +2,7 @@
 #define TROOP_H
 #include "Cards.h"
 
-class Troop : public cards {
+class Troop : public Cards {
     private:
     int health, damage, speed, range;
 
