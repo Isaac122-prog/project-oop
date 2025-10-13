@@ -10,3 +10,10 @@ run: all
 # remove the game from explorer
 clean:
 	rm -f *.o Game
+
+#upload to github
+git:
+	git pull
+	git add .
+	git commit -m "commit"
+	git push
