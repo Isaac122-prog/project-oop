@@ -16,10 +16,13 @@ bool CardList::removeCards(const std::string& name) {
     return removed;
 }
 
-bool CardList::EditCards(std::string name, const Cards& update){
-    for (const auto& card: CardList) {
-        card.display();
-        
+bool CardList::EditCards(const std::string& name, const Cards& update) {
+    for (auto& card : CardList) {
+        if (card.getNameConst() == name) {
+            card = update;  // replace old card data
+            return true;    // found and updated
+        }
     }
+    return false; // not found
 }
 
