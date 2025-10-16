@@ -1,0 +1,816 @@
+Keep:
+card name = Giant
+elixir = 5
+health = 4090
+attack = 70
+defense = 10
+rarity = Rare
+role = WinCon
+
+card name = Royal Hogs
+elixir = 5
+health = 3348
+attack = 75
+defense = 5 
+rarity = Rare
+role = WinCon
+
+card name = Hog Rider
+elixir = 4
+health = 1697
+attack = 80
+defense = 5
+rarity = Rare
+role = WinCon
+
+Golem
+Royal Giant
+Goblin Barrel
+Balloon
+Graveyard
+Lava Hound
+Mega Knight
+
+The Log
+Arrows
+Zap
+Giant Snowball
+Tornado
+Barbarian Barrel
+
+Fireball
+Lightning
+Earthquake
+Poison
+Freeze
+Rocket
+
+Musketeer
+Witch
+Zappies
+Electro Wizard
+Hunter
+Wizard
+Baby Dragon
+Inferno Dragon
+Magic Archer
+
+Dart Goblin
+Firecracker
+Archers
+Mega Minion
+Spear Goblins
+Princess
+Bats
+Minions
+Ice Wizard
+
+Cannon Cart
+Bandit
+Bowler
+Bomber
+Night Witch
+Sparky
+
+PEKKA
+Mini PEKKA
+Elite Barbarians
+Lumberjack
+Barbarians
+Boss Bandit
+Cannon
+Tesla
+Bomb Tower
+Inferno Tower
+
+Prince
+Dark Prince
+Knight
+Valkyrie
+Miner
+Ice Golem
+Royal Ghost
+Fisherman
+
+Goblin Gang
+Guards
+Tombstone
+Goblins
+Ice Spirit 
+Fire Spirit
+Skeleton Army
+Skeletons
+
+Bin:
+Electro Giant
+Goblin Giant
+Ram Rider
+Wall Breakers
+Elixir Golem
+Mortar 
+X-Bow
+Goblin Drill
+Battle Ram
+
+Royal Delivery
+Goblin Curse
+Void
+
+Minion Horde
+Executioner
+Skeleton Dragons
+Phoenix
+Electro Dragon
+
+Flying Machine
+
+Goblin Demolisher
+Mother Witch
+Elixir Collector
+Rage
+
+Royal Recruits
+Goblin Cage
+Furnace
+Goblin Hut
+Barbarian Hut
+
+Rascals
+Goblin Machine
+Battle Healer
+
+Skeleton Barrel
+Electro Spirit
+Heal Spirit
+
+Skeleton King
+Mirror
+Berserker
+Suspicious Bush
+Vines
+Clone
+Little Prince
+Rune Giant
+Golden Knight
+Mighty Miner
+Archer Queen
+Monk
+Goblenstein
+Giant Skeleton
+Spirit Empress
+Three Musketeers
+
+
+
+
+
+
+
+card name: Giant
+elixir: 5
+health: 120
+attack: 80
+defense: 30
+rarity: rare
+tripledraftrole: WinCon
+role: WinCon
+---
+card name: Hog Rider
+elixir: 4
+health: 70
+attack: 80
+defense: 20
+rarity: rare
+tripledraftrole: WinCon
+role: WinCon
+---
+card name: Royal Hogs
+elixir: 5
+health: 70
+attack: 80
+defense: 40
+rarity: rare
+tripledraftrole: WinCon
+role: WinCon
+---
+card name: Golem
+elixir: 8
+health: 150
+attack: 110
+defense: 50
+rarity: epic
+tripledraftrole: WinCon
+role: WinCon
+---
+card name: Royal Giant
+elixir: 6
+health: 100
+attack: 90
+defense: 30
+rarity: common
+tripledraftrole: WinCon
+role: WinCon
+---
+card name: Goblin Barrel
+elixir: 3
+health: 30
+attack: 60
+defense: 30
+rarity: epic
+tripledraftrole: WinCon
+role: WinCon
+---
+card name: Balloon
+elixir: 5
+health: 60
+attack: 100
+defense: 40
+rarity: epic
+tripledraftrole: WinCon
+role: WinCon
+---
+card name: Graveyard
+elixir: 5
+health: 30
+attack: 90
+defense: 60
+rarity: legendary
+tripledraftrole: WinCon
+role: WinCon
+---
+card name: Lava Hound
+elixir: 7
+health: 120
+attack: 80
+defense: 60
+rarity: legendary
+tripledraftrole: WinCon
+role: WinCon
+---
+card name: The Log
+elixir: 2
+health: 0
+attack: 25
+defense: 35
+rarity: legendary
+tripledraftrole: SmallSpell
+role: SmallSpell
+---
+card name: Arrows
+elixir: 3
+health: 0
+attack: 35
+defense: 45
+rarity: common
+tripledraftrole: SmallSpell
+role: SmallSpell
+---
+card name: Zap
+elixir: 2
+health: 0
+attack: 30
+defense: 30
+rarity: common
+tripledraftrole: SmallSpell
+role: SmallSpell
+---
+card name: Giant Snowball
+elixir: 2
+health: 0
+attack: 30
+defense: 30
+rarity: common
+tripledraftrole: SmallSpell
+role: SmallSpell
+---
+card name: Tornado
+elixir: 3
+health: 0
+attack: 30
+defense: 50
+rarity: epic
+tripledraftrole: SmallSpell
+role: SmallSpell
+---
+card name: Barbarian Barrel
+elixir: 2
+health: 20
+attack: 30
+defense: 40
+rarity: epic
+tripledraftrole: SmallSpell
+role: SmallSpell
+---
+card name: Fireball
+elixir: 4
+health: 0
+attack: 65
+defense: 55
+rarity: rare
+tripledraftrole: BigSpell
+role: BigSpell
+---
+card name: Lightning
+elixir: 6
+health: 0
+attack: 90
+defense: 70
+rarity: epic
+tripledraftrole: BigSpell
+role: BigSpell
+---
+card name: Earthquake
+elixir: 3
+health: 0
+attack: 60
+defense: 20
+rarity: rare
+tripledraftrole: BigSpell
+role: BigSpell
+---
+card name: Poison
+elixir: 4
+health: 0
+attack: 60
+defense: 60
+rarity: epic
+tripledraftrole: BigSpell
+role: BigSpell
+---
+card name: Freeze
+elixir: 4
+health: 0
+attack: 70
+defense: 50
+rarity: epic
+tripledraftrole: BigSpell
+role: BigSpell
+---
+card name: Rocket
+elixir: 6
+health: 0
+attack: 85
+defense: 85
+rarity: rare
+tripledraftrole: BigSpell
+role: BigSpell
+---
+card name: Musketeer
+elixir: 4
+health: 50
+attack: 60
+defense: 70
+rarity: rare
+tripledraftrole: AntiAir
+role: AntiAir
+---
+card name: Witch
+elixir: 5
+health: 60
+attack: 75
+defense: 75
+rarity: epic
+tripledraftrole: AntiAir
+role: AntiAir
+---
+card name: Zappies
+elixir: 4
+health: 45
+attack: 45
+defense: 80
+rarity: rare
+tripledraftrole:
+role:
+---
+card name: Electro Wizard
+elixir: 4
+health: 50
+attack: 55
+defense: 65
+rarity: legendary
+tripledraftrole: AntiAir
+role: AntiAir
+---
+card name: Hunter
+elixir: 4
+health: 55
+attack: 50
+defense: 70
+rarity: epic
+tripledraftrole: AntiAir
+role: AntiAir
+---
+card name: Wizard
+elixir: 5
+health: 50
+attack: 70
+defense: 80
+rarity: rare
+tripledraftrole: AntiAir
+role: AntiAir
+---
+card name: Baby Dragon
+elixir: 4
+health: 60
+attack: 60
+defense: 60
+rarity: epic
+tripledraftrole: AntiAir
+role: AntiAir
+---
+card name: Inferno Dragon
+elixir: 4
+health: 60
+attack: 50
+defense: 70
+rarity: legendary
+tripledraftrole: AntiAir
+role: AntiAir
+---
+card name: Magic Archer
+elixir: 4
+health: 40
+attack: 70
+defense: 60
+rarity: legendary
+tripledraftrole: AntiAir
+role: AntiAir
+---
+card name: Dart Goblin
+elixir: 3
+health: 30
+attack: 45
+defense: 45
+rarity: rare
+tripledraftrole: CheapAntiAir
+role: CheapAntiAir
+---
+card name: Firecracker
+elixir: 3
+health: 35
+attack: 50
+defense: 35
+rarity: common
+tripledraftrole: CheapAntiAir
+role: CheapAntiAir
+---
+card name: Archers
+elixir: 3
+health: 35
+attack: 35
+defense: 40
+rarity: common
+tripledraftrole: CheapAntiAir
+role: CheapAntiAir
+---
+card name: Mega Minion
+elixir: 3
+health: 40
+attack: 30
+defense: 50
+rarity: rare
+tripledraftrole: CheapAntiAir
+role: CheapAntiAir
+---
+card name: Spear Goblins
+elixir: 2
+health: 25
+attack: 30
+defense: 30
+rarity: common
+tripledraftrole: CheapAntiAir
+role: CheapAntiAir
+---
+card name: Princess
+elixir: 3
+health: 30
+attack: 35
+defense: 35
+rarity: legendary
+tripledraftrole: CheapAntiAir
+role: CheapAntiAir
+---
+card name: Bats
+elixir: 2
+health: 15
+attack: 30
+defense: 35
+rarity: common
+tripledraftrole: CheapAntiAir
+role: CheapAntiAir
+---
+card name: Minions
+elixir: 3
+health: 30
+attack: 30
+defense: 40
+rarity: common
+tripledraftrole: CheapAntiAir
+role: CheapAntiAir
+---
+card name: Ice Wizard
+elixir: 3
+health: 40
+attack: 15
+defense: 55
+rarity: legendary
+tripledraftrole: CheapAntiAir
+role: CheapAntiAir
+---
+card name: Cannon Cart
+elixir: 5
+health: 75
+attack: 70
+defense: 75
+rarity: epic
+tripledraftrole: TankSupport
+role: HeavyTank
+---
+card name: Bandit
+elixir: 3
+health: 45
+attack: 45
+defense: 30
+rarity: legendary
+tripledraftrole: TankSupport
+role: MiniTank
+---
+card name: Boss Bandit
+elixir: 6
+health: 85
+attack: 85
+defense: 60
+rarity: legendary
+tripledraftrole: TankSupport
+role: HeavyTank
+---
+card name: Bowler
+elixir: 5
+health: 80
+attack: 60
+defense: 80
+rarity: epic
+tripledraftrole: TankSupport
+role: HeavyTank
+---
+card name: Mega Knight
+elixir: 7
+health: 110
+attack: 90
+defense: 80
+rarity: legendary
+tripledraftrole: HeavyTank
+role: HeavyTank
+---
+card name: Bomber
+elixir: 2
+health: 30
+attack: 30
+defense: 40
+rarity: common
+tripledraftrole: TankSupport
+role: Distraction
+---
+card name: Night Witch
+elixir: 4
+health: 55
+attack: 70
+defense: 50
+rarity: legendary
+tripledraftrole: AntiTank
+role: MiniTank
+---
+card name: Sparky
+elixir: 6
+health: 75
+attack: 90
+defense: 70
+rarity: legendary
+tripledraftrole: AntiTank
+role: HeavyTank
+---
+card name: PEKKA
+elixir: 7
+health: 100
+attack: 80
+defense: 100
+rarity: epic
+tripledraftrole: AntiTank
+role: HeavyTank
+---
+card name: Mini PEKKA
+elixir: 4
+health: 70
+attack: 50
+defense: 70
+rarity: rare
+tripledraftrole: AntiTank
+role: HeavyTank
+---
+card name: Elite Barbarians
+elixir: 6
+health: 75
+attack: 80
+defense: 75
+rarity: common
+tripledraftrole: AntiTank
+role: HeavyTank
+---
+card name: Lumberjack
+elixir: 4
+health: 65
+attack: 75
+defense: 50
+rarity: legendary
+tripledraftrole: AntiTank
+role: HeavyTank
+---
+card name: Barbarians
+elixir: 5
+health: 70
+attack: 50
+defense: 75
+rarity: common
+tripledraftrole: AntiTank
+role: HeavyTank
+---
+card name: Cannon
+elixir: 3
+health: 50
+attack: 10
+defense: 50
+rarity: common
+tripledraftrole: AntiTank
+role: Building
+---
+card name: Tesla
+elixir: 4
+health: 60
+attack: 10
+defense: 65
+rarity: common
+tripledraftrole: AntiTank
+role: Building
+---
+card name: Bomb Tower
+elixir: 4
+health: 65
+attack: 15
+defense: 65
+rarity: rare
+tripledraftrole: AntiTank
+role: Building
+---
+card name: Inferno Tower
+elixir: 5
+health: 75
+attack: 10
+defense: 80
+rarity: rare
+tripledraftrole: AntiTank
+role: Building
+---
+card name: Prince
+elixir: 5
+health: 75
+attack: 75
+defense: 70
+rarity: epic
+tripledraftrole: MiniTank
+role: HeavyTank
+---
+card name: Dark Prince
+elixir: 4
+health: 70
+attack: 65
+defense: 50
+rarity: epic
+tripledraftrole: MiniTank
+role: MiniTank
+---
+card name: Knight
+elixir: 3
+health: 70
+attack: 35
+defense: 45
+rarity: common
+tripledraftrole: MiniTank
+role: MiniTank
+---
+card name: Valkyrie
+elixir: 4
+health: 75
+attack: 50
+defense: 70
+rarity: rare
+tripledraftrole:
+role:
+---
+card name: Miner
+elixir: 3
+health: 50
+attack: 45
+defense: 25
+rarity: legendary
+tripledraftrole: MiniTank
+role: MiniTank
+---
+card name: Ice Golem
+elixir: 2
+health: 70
+attack: 15
+defense: 35
+rarity: rare
+tripledraftrole: MiniTank
+role: Distraction
+---
+card name: Royal Ghost
+elixir: 3
+health: 50
+attack: 40
+defense: 35
+rarity: legendary
+tripledraftrole: MiniTank
+role: MiniTank
+---
+card name: Fisherman
+elixir: 3
+health: 45
+attack: 30
+defense: 50
+rarity: legendary
+tripledraftrole: MiniTank
+role: MiniTank
+---
+card name: Goblin Gang
+elixir: 3
+health: 30
+attack: 45
+defense: 45
+rarity: common
+tripledraftrole: Distraction
+role: Distraction
+---
+card name: Guards
+elixir: 3
+health: 40
+attack: 35
+defense: 50
+rarity: epic
+tripledraftrole: Distraction
+role: Distraction
+---
+card name: Tombstone
+elixir: 3
+health: 50
+attack: 15
+defense: 55
+rarity: rare
+tripledraftrole: Distraction
+role: Building
+---
+card name: Goblins
+elixir: 2
+health: 30
+attack: 30
+defense: 30
+rarity: common
+tripledraftrole: Distraction
+role: Distraction
+---
+card name: Ice Spirit
+elixir: 1
+health: 15
+attack: 15
+defense: 35 
+rarity: common
+tripledraftrole: Distraction
+role: Distraction
+---
+card name: Fire Spirit
+elixir: 1
+health: 15
+attack: 25
+defense: 25
+rarity: common
+tripledraftrole: Distraction
+role: Distraction
+---
+card name: Skeleton Army
+elixir: 3
+health: 20
+attack: 40
+defense: 50
+rarity: epic
+tripledraftrole: Distraction
+role: Distraction
+---
+card name: Skeletons
+elixir: 1
+health: 10
+attack: 20
+defense: 30
+rarity: common
+tripledraftrole: Distraction
+role: Distraction
+---
