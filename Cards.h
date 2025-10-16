@@ -1,19 +1,45 @@
 #ifndef CARDS_H
 #define CARDS_H
+#include <iostream>
 #include <string>
 
 class Cards {
     private:
-    std::string Card_ID, Card_name, Rarity, Role;
-    int Elixir_cost, Health;
+    int Health;
+    int Attack;
+    int Defence;
+    int Elixir;
+    std::string Name;
+    std::string Rarity;
+    std::string Role;
 
     public:
-    std::string Get_Card_ID;
-    std::string Get_Card_name;
-    std::string Get_Rarity;
-    std::string Get_Role;
-    int Get_Elixir_cost;
-    int Get_Health;
+    Cards(int Elix, int He, int Att, int Def, const std::string& n, const std::string& r, const std::string& rare);
+
+    void setCardElixir(int Elix);
+    int getCardElixir() const;
+
+    void setCardHealth(int He);
+    int getCardHealth() const;
+
+    void setCardAttack(int Att);
+    int getCardAttack() const;
+
+    void setCardDefence(int Def);
+    int getCardDefence() const;
+
+    void SetCardName(const std::string& n);
+    std::string getCardName() const;
+
+    void SetCardRole(const std::string& r);
+    std::string getCardRole() const;
+
+    void SetCardRare(const std::string& rare);
+    std::string getCardRare() const;
+
+    void display() const;
+
+    virtual ~Cards() = default;
 };
 
 #endif

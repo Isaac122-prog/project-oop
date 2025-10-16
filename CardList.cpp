@@ -5,24 +5,29 @@ void CardList::addCards(const Cards& card){
     CardList.push_back(card);
 }
 
-bool CardList::removeCards(const std::string& name) {
-    auto it = std::remove_if(CardList.begin(), CardList.end(),
-        [&](const Cards& c) {
-            return c.getNameConst() == name;
-        });
-
-    bool removed = (it != CardList.end());
-    CardList.erase(it, CardList.end());
-    return removed;
-}
-
-bool CardList::EditCards(const std::string& name, const Cards& update) {
-    for (auto& card : CardList) {
-        if (card.getNameConst() == name) {
-            card = update;  // replace old card data
-            return true;    // found and updated
+bool CardList::removeCards(const std::string& n){
+    for (auto it = CardList.begin(); it !=CardList.end(); ++it){
+        if (it->getCardName() == n){
+            CardList.erase(it);
+            return true;
         }
     }
-    return false; // not found
+    return false;
+}
+
+bool CardList::EditCards(std::string n, const Cards& update){
+    for (auto& card : CardList) {
+        if (card.getCardName() == n) {
+            card = update;
+            return true;
+        }
+    }
+    return false;
+}
+
+void CardList::listCards() const{
+    for(const auto& card : CardList){
+        card.display();
+    }
 }
 

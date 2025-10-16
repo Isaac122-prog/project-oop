@@ -2,38 +2,69 @@
 #include <string>
 #include "Cards.h"
 
-Cards::Cards(int Att, int Def, int Elix, int He, const std::string& name, const std::string& r)
-    : attack(Att), defence(Def), elixir(Elix), health(He), card_name(name), role(r) {}
+Cards::Cards(int Elix, int He, int Att, int Def, const std::string& n, const std::string& r, const std::string& rare)
+    : Attack(Att), Defence(Def), Elixir(Elix), Health(He), Name(n), Role(r) {}
 
 
 void Cards::setCardAttack(int Att){
-    attack = Att;
+    Attack = Att;
 }
 
 void Cards::setCardDefence(int Def){
-    defence = Def;
+    Defence = Def;
 }
 
 void Cards::setCardElixir(int Elix){
-    elixir = Elix;
+    Elixir = Elix;
 }
 
 void Cards::setCardHealth(int He){
-    health = He;
+    Health = He;
 }
 
-void Cards::setCardName(const std::string& name){
-    card_name = name;
+void Cards::SetCardName(const std::string& n){
+    Name = n;
 }
 
-void Cards::setCardRole(const std::string& r){
-    role = r;
+void Cards::SetCardRole(const std::string& r){
+    Role = r;
+}
+
+int Cards::getCardAttack() const{
+    return Attack;
+}
+
+int Cards::getCardDefence() const{
+    return Defence;
+}
+
+int Cards::getCardElixir() const{
+    return Elixir;
+}
+
+int Cards::getCardHealth() const{
+    return Health;
+}
+
+std::string Cards::getCardName() const{
+    return Name;
+}
+
+std::string Cards::getCardRare() const{
+    return Rarity;
+}
+
+std::string Cards::getCardRole() const{
+    return Role;
 }
 
 void Cards::display() const{
-    std::cout << "Name: " << card_name
-              << ",Elixir " << elixir
-              << ", Attack " << attack
-              << ", Defence" << defence << std::endl;
+    std::cout << "Name: " << Name
+              << ",Elixir " << Elixir
+              << ", Attack " << Attack
+              << ", Defence" << Defence 
+              << ", Health" << Health
+              << ", Role" << Role
+              << ", Rarity" << Rarity << std::endl;
 }
 
