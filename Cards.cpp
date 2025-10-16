@@ -3,7 +3,7 @@
 #include "Cards.h"
 
 Cards::Cards(int Elix, int He, int Att, int Def, const std::string& n, const std::string& r, const std::string& rare)
-    : Attack(Att), Defence(Def), Elixir(Elix), Health(He), Name(n), Role(r) {}
+    : Attack(Att), Defence(Def), Elixir(Elix), Health(He), Name(n), Role(r), Rarity(rare) {}
 
 
 void Cards::setCardAttack(int Att){
