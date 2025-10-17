@@ -1,171 +1,3 @@
-Keep:
-card name = Giant
-elixir = 5
-health = 4090
-attack = 70
-defense = 10
-rarity = Rare
-role = WinCon
-
-card name = Royal Hogs
-elixir = 5
-health = 3348
-attack = 75
-defense = 5 
-rarity = Rare
-role = WinCon
-
-card name = Hog Rider
-elixir = 4
-health = 1697
-attack = 80
-defense = 5
-rarity = Rare
-role = WinCon
-
-Golem
-Royal Giant
-Goblin Barrel
-Balloon
-Graveyard
-Lava Hound
-Mega Knight
-
-The Log
-Arrows
-Zap
-Giant Snowball
-Tornado
-Barbarian Barrel
-
-Fireball
-Lightning
-Earthquake
-Poison
-Freeze
-Rocket
-
-Musketeer
-Witch
-Zappies
-Electro Wizard
-Hunter
-Wizard
-Baby Dragon
-Inferno Dragon
-Magic Archer
-
-Dart Goblin
-Firecracker
-Archers
-Mega Minion
-Spear Goblins
-Princess
-Bats
-Minions
-Ice Wizard
-
-Cannon Cart
-Bandit
-Bowler
-Bomber
-Night Witch
-Sparky
-
-PEKKA
-Mini PEKKA
-Elite Barbarians
-Lumberjack
-Barbarians
-Boss Bandit
-Cannon
-Tesla
-Bomb Tower
-Inferno Tower
-
-Prince
-Dark Prince
-Knight
-Valkyrie
-Miner
-Ice Golem
-Royal Ghost
-Fisherman
-
-Goblin Gang
-Guards
-Tombstone
-Goblins
-Ice Spirit 
-Fire Spirit
-Skeleton Army
-Skeletons
-
-Bin:
-Electro Giant
-Goblin Giant
-Ram Rider
-Wall Breakers
-Elixir Golem
-Mortar 
-X-Bow
-Goblin Drill
-Battle Ram
-
-Royal Delivery
-Goblin Curse
-Void
-
-Minion Horde
-Executioner
-Skeleton Dragons
-Phoenix
-Electro Dragon
-
-Flying Machine
-
-Goblin Demolisher
-Mother Witch
-Elixir Collector
-Rage
-
-Royal Recruits
-Goblin Cage
-Furnace
-Goblin Hut
-Barbarian Hut
-
-Rascals
-Goblin Machine
-Battle Healer
-
-Skeleton Barrel
-Electro Spirit
-Heal Spirit
-
-Skeleton King
-Mirror
-Berserker
-Suspicious Bush
-Vines
-Clone
-Little Prince
-Rune Giant
-Golden Knight
-Mighty Miner
-Archer Queen
-Monk
-Goblenstein
-Giant Skeleton
-Spirit Empress
-Three Musketeers
-
-
-
-
-
-
-
 card name: Giant
 elixir: 5
 health: 120
@@ -379,8 +211,8 @@ health: 45
 attack: 45
 defense: 80
 rarity: rare
-tripledraftrole:
-role:
+tripledraftrole: AntiAir
+role: AntiAir
 ---
 card name: Electro Wizard
 elixir: 4
@@ -703,8 +535,8 @@ health: 75
 attack: 50
 defense: 70
 rarity: rare
-tripledraftrole:
-role:
+tripledraftrole: MiniTank
+role: MiniTank
 ---
 card name: Miner
 elixir: 3
