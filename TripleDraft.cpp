@@ -24,10 +24,6 @@ std::vector<Card> loadCardsFromFile(const std::string& filename) {
         std::istringstream iss(line);
         Card c;
 
-        // Your format:
-        // elixir attack defense name role emoji rarity
-        // Example: 5 120 80 30 Giant WinCon WinCon Rare
-
         iss >> c.elixir >> c.attack >> c.defense;
         iss >> std::ws;
 
