@@ -1,0 +1,20 @@
+
+=== Player 1 Deck ===
+70 Lightning (6 elixir, 0 ATK, 90 DEF, Epic BigSpell, BigSpell)
+75 Witch (5 elixir, 60 ATK, 75 DEF, Epic AntiAir, AntiAir)
+60 Magic Archer (4 elixir, 40 ATK, 70 DEF, Legendary AntiAir, AntiAir)
+60 Graveyard (5 elixir, 30 ATK, 90 DEF, Legendary WinCon, WinCon)
+55 Tombstone (3 elixir, 50 ATK, 15 DEF, Rare Building, Distraction)
+25 Miner (3 elixir, 50 ATK, 45 DEF, Legendary MiniTank, MiniTank)
+35 Royal Ghost (3 elixir, 50 ATK, 40 DEF, Legendary MiniTank, MiniTank)
+55 Ice Wizard (3 elixir, 40 ATK, 15 DEF, Legendary CheapAntiAir, CheapAntiAir)
+
+=== Player 2 Deck ===
+50 Mega Minion (3 elixir, 40 ATK, 30 DEF, Rare CheapAntiAir, CheapAntiAir)
+60 Lava Hound (7 elixir, 120 ATK, 80 DEF, Legendary WinCon, WinCon)
+70 Valkyrie (4 elixir, 75 ATK, 50 DEF, Rare MiniTank, MiniTank)
+50 Guards (3 elixir, 40 ATK, 35 DEF, Epic Distraction, Distraction)
+50 Dark Prince (4 elixir, 70 ATK, 65 DEF, Epic MiniTank, MiniTank)
+60 Baby Dragon (4 elixir, 60 ATK, 60 DEF, Epic AntiAir, AntiAir)
+65 Electro Wizard (4 elixir, 50 ATK, 55 DEF, Legendary AntiAir, AntiAir)
+70 Musketeer (4 elixir, 50 ATK, 60 DEF, Rare AntiAir, AntiAir)
