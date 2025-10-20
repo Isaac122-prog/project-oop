@@ -12,9 +12,10 @@ class Cards {
     std::string Name;
     std::string Rarity;
     std::string Role;
+    std::string Trip_Role;
 
     public:
-    Cards(int Elix, int He, int Att, int Def, const std::string& n, const std::string& r, const std::string& rare);
+    Cards(int Elix, int He, int Att, int Def, const std::string& n, const std::string& T_Role, const std::string& r, const std::string& rare);
 
     void setCardElixir(int Elix);
     int getCardElixir() const;
@@ -36,6 +37,9 @@ class Cards {
 
     void SetCardRare(const std::string& rare);
     std::string getCardRare() const;
+
+    void SetCardTripleDraftRole(const std::string& Trip_Role);
+    std::string getCardTripleDraftRole() const;
 
     void display() const;
 

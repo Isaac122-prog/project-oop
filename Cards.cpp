@@ -2,8 +2,8 @@
 #include <string>
 #include "Cards.h"
 
-Cards::Cards(int Elix, int He, int Att, int Def, const std::string& n, const std::string& r, const std::string& rare)
-    : Attack(Att), Defence(Def), Elixir(Elix), Health(He), Name(n), Role(r), Rarity(rare) {}
+Cards::Cards(int Elix, int He, int Att, int Def, const std::string& n, const std::string& T_Role, const std::string& r, const std::string& rare)
+    : Attack(Att), Defence(Def), Elixir(Elix), Health(He), Name(n), Trip_Role(T_Role), Role(r), Rarity(rare) {}
 
 
 void Cards::setCardAttack(int Att){
@@ -28,6 +28,10 @@ void Cards::SetCardName(const std::string& n){
 
 void Cards::SetCardRole(const std::string& r){
     Role = r;
+}
+
+void Cards::SetCardTripleDraftRole(const std::string& T_Role){
+    Trip_Role = T_Role;
 }
 
 int Cards::getCardAttack() const{
@@ -58,13 +62,18 @@ std::string Cards::getCardRole() const{
     return Role;
 }
 
+std::string Cards::getCardTripleDraftRole() const{
+    return Trip_Role;
+}
+
 void Cards::display() const{
     std::cout << "Name: " << Name
-              << ",Elixir " << Elixir
-              << ", Attack " << Attack
-              << ", Defence" << Defence 
-              << ", Health" << Health
-              << ", Role" << Role
-              << ", Rarity" << Rarity << std::endl;
+              << ", Elixir: " << Elixir
+              << ", Attack: " << Attack
+              << ", Defence: " << Defence 
+              << ", Health: " << Health
+              << ", tripple Draft Role" << Trip_Role
+              << ", Role: " << Role
+              << ", Rarity: " << Rarity << std::endl;
 }
 

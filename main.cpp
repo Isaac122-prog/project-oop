@@ -86,6 +86,8 @@ void mainMenu(CardList& CardListClass){
                     std::string RareRaw;
                     std::string r;
                     std::string RoleRaw;
+                    std::string T_Role;
+                    std::string T_RoleRaw;
 
                     clearScreen();
 
@@ -149,6 +151,18 @@ void mainMenu(CardList& CardListClass){
                         }
                     }
 
+                    while (true){
+                        std::cout << "Enter Tripple Draft Role: ";
+                        std::getline(std::cin, T_RoleRaw);
+                        if(RoleRaw == "Win Con" || RoleRaw == "Small Spell" || RoleRaw == "Big Spell" || RoleRaw == ""){
+                            T_Role = T_RoleRaw;
+                            break;
+                        }
+                        else{
+                            std::cout << "invalid input. Please enter one the options\n";
+                        }
+                    }
+
                     // Role
                     while(true){
                         std::cout << "Enter Role: ";
@@ -174,7 +188,7 @@ void mainMenu(CardList& CardListClass){
                             std::cout << "invalid input. Please enter one the options\n";
                         }
                     }
-                    Cards newCard(Elix, He, Att, Def, n, r, rare);
+                    Cards newCard(Elix, He, Att, Def, n, T_Role, r, rare);
                     CardListClass.addCards(newCard);
                     std::cout << "Card added.\n";
                 }
@@ -189,6 +203,7 @@ void mainMenu(CardList& CardListClass){
                         std::cout << "Employee not found.\n";
                     }
                 }
+                    // import a text file so that the card can be auto inputted
                     else if(CardChoice == 3){
                         std::string filename;
                         std::cout << "Enter file name (e.g. cards.txt): ";
@@ -198,19 +213,26 @@ void mainMenu(CardList& CardListClass){
                     if (!file.is_open()) {
                         std::cout << "Error: Could not open file.\n";
                     } else {
-                        std::string n, r, rare;
-                        int Elix, He, Att, Def;
+                        int He;
+                        int Att;
+                        int Def;
+                        int Elix;
+                        std::string n;
+                        std::string rare;
+                        std::string r;
+                        std::string T_Role;
 
                         int count = 0;
-                        while (file >> Elix >> He >> Att >> Def >> n >> r >> rare) {
-                            Cards newCard(Elix, He, Att, Def, n, r, rare);
+                        while (file >> Elix >> He >> Att >> Def >> n >> T_Role >>r >> rare) {
+                            Cards newCard(Elix, He, Att, Def, n, T_Role, r, rare);
                             CardListClass.addCards(newCard);
                             count++;
                         }
-                        
+
                         file.close();
                         std::cout << count << " cards imported successfully from " << filename << ".\n";
                     }
+                    pause();
                 }
             }
         }
