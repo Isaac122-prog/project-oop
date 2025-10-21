@@ -5,7 +5,7 @@
 #include <string>
 #include "Deck.h"
 
-class DeckGrader {
+class DeckGrader : public Deck {
     private:
         std::unordered_map<std::string, std::unordered_map<int, int>> roleScores;
     public:

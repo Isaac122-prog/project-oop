@@ -1,34 +1,42 @@
 #include <iostream>
+#include <string>
 #include <iomanip>
 #include "Cards.h"
+#include "CardList.h"
 #include "Deck.h"
 #include "DeckGrader.h"
 
 int main() {
-    // Create 8 cards (Trip_Role, Role, Rarity)
-    Cards c1(5, 50, 40, 50, "Knight", "Tank", "MiniTank", "Common");
-    Cards c2(4, 40, 50, 50, "Musketeer", "AntiAir", "AntiAir", "Rare");
-    Cards c3(3, 0, 40, 40, "Fireball", "Spell", "BigSpell", "Rare");
-    Cards c4(2, 10, 10, 20, "Ice Spirit", "CheapAA", "Distraction", "Common");
-    Cards c5(6, 90, 80, 20, "Giant", "Tank", "WinCon", "Epic");
-    Cards c6(3, 20, 30, 30, "Archer", "AntiAir", "CheapAntiAir", "Common");
-    Cards c7(4, 40, 55, 60, "Wizard", "Splash", "AntiAir", "Epic");
-    Cards c8(5, 50, 45, 0, "Baby Dragon", "Splash", "AntiAir", "Epic");
+    CardList cardListClass;
+    cardListClass.loadFromFile("cards.txt"); // or however you load your database
 
-    // Create deck and add cards
+    std::cout << "\n==== Cards Database ====\n";
+    cardListClass.displayCards();  // show all cards in the list
+
     Deck myDeck;
-    myDeck.addCard(c1);
-    myDeck.addCard(c2);
-    myDeck.addCard(c3);
-    myDeck.addCard(c4);
-    myDeck.addCard(c5);
-    myDeck.addCard(c6);
-    myDeck.addCard(c7);
-    myDeck.addCard(c8);
+    std::string cardName;
 
-    // Display deck
+    std::cout << "\nCreate your deck (pick 8 cards by name):\n";
+
+    for (int i = 0; i < 8; ++i) {
+        std::cout << "Enter card name #" << i + 1 << ": ";
+        std::getline(std::cin, cardName);
+
+        // Find card in the database
+        Cards selectedCard;
+        if (cardDatabase.findCardByName(cardName, selectedCard)) {
+            myDeck.addCard(selectedCard);
+            std::cout << cardName << " added to deck.\n";
+        } else {
+            std::cout << "Card not found. Try again.\n";
+            --i; // retry this iteration
+        }
+    }
+
     std::cout << "\n--- Deck Contents ---\n";
     myDeck.displayDeck();
+
+    // Grade the deck
 
     // Create DeckGrader
     DeckGrader grader;

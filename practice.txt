@@ -1,3 +1,0 @@
-
-
-3 800 120 150 knight Minitank Minitank common
