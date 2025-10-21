@@ -76,58 +76,6 @@ void mainMenu(CardList& CardListClass){
                     break;
                 }
             }
-case 4:
-    clearScreen();
-    std::cout << "==== Triple Draft ====\n";
-
-    {
-        std::vector<Card> allCards = loadCardsFromFile("cards.txt");
-
-        if (allCards.empty()) {
-            std::cout << "No cards loaded. Check your cards.txt file.\n";
-            pause();
-            break;
-        }
-
-        // Randomly select 30 cards for this draft
-        std::vector<Card> availableCards = selectRandomCards(allCards, 30);
-
-        std::cout << "\n=== Welcome to Two-Player Triple Draft (8 cards each) ===\n";
-
-        // Player 1 drafts
-        std::vector<Card> player1Deck = playerDraft(availableCards, "Player 1");
-
-        // Player 2 drafts
-        std::vector<Card> player2Deck = playerDraft(availableCards, "Player 2");
-
-        // Display results
-        std::cout << "\n=== Player 1 Deck ===\n";
-        for (const auto& c : player1Deck)
-            std::cout << c.name << " (" << c.elixir << " elixir, "
-                      << c.attack << " ATK, "
-                      << c.defense << " DEF, "
-                      << c.rarity << " " << c.emoji
-                      << ", " << c.role << ")\n";
-
-        std::cout << "\n=== Player 2 Deck ===\n";
-        for (const auto& c : player2Deck)
-            std::cout << c.name << " (" << c.elixir << " elixir, "
-                      << c.attack << " ATK, "
-                      << c.defense << " DEF, "
-                      << c.rarity << " " << c.emoji
-                      << ", " << c.role << ")\n";
-
-        // Save results to file
-        saveDeckToFile("draft_results.txt", player1Deck, "Player 1");
-        saveDeckToFile("draft_results.txt", player2Deck, "Player 2");
-
-        std::cout << "\nDraft complete! Results saved to draft_results.txt\n";
-    }
-
-    pause();
-    break;
-
-
                 if(CardChoice == 1){
                     int He;
                     int Att;
@@ -206,12 +154,14 @@ case 4:
                     while (true){
                         std::cout << "Enter Triple Draft Role: ";
                         std::getline(std::cin, T_RoleRaw);
-                        if(RoleRaw == "Win Con" || RoleRaw == "Small Spell" || RoleRaw == "Big Spell" || RoleRaw == ""){
+                        if(T_RoleRaw == "WinCon" || T_RoleRaw == "SmallSpell" || T_RoleRaw == "BigSpell" || T_RoleRaw == "AntiAir" || T_RoleRaw == "CheapAntiAir" || T_RoleRaw == "tankSupport" 
+                        || T_RoleRaw == "AntiTank" || T_RoleRaw == "MiniTank" || T_RoleRaw == "Distraction"){
                             T_Role = T_RoleRaw;
                             break;
                         }
                         else{
                             std::cout << "invalid input. Please enter one the options\n";
+                            std::cout << "WinCon, SmallSpell, BigSpell, AntiAir, CheapAntiAir, TankSupport, AntiTank, MiniTank, Distraction\n";
                         }
                     }
 
@@ -219,7 +169,8 @@ case 4:
                     while(true){
                         std::cout << "Enter Role: ";
                         std::getline(std::cin, RoleRaw);
-                        if(RoleRaw == "MiniTank" || RoleRaw == "Heavey Tank"){
+                        if(RoleRaw == "WinCon" || RoleRaw == "SmallSpell" || RoleRaw == "BigSpell" || RoleRaw == "AntiAir" || RoleRaw == "CheapAntiAir" || RoleRaw == "HeavyTank"
+                        || RoleRaw == "MiniTank" || RoleRaw == "Building" || RoleRaw == "Distraction"){
                             r = RoleRaw;
                             break;
                         }
@@ -279,6 +230,7 @@ case 4:
                             Cards newCard(Elix, He, Att, Def, n, T_Role, r, rare);
                             CardListClass.addCards(newCard);
                             count++;
+                            std::cout << "Imported: " << n << "\n";
                         }
 
                         file.close();

@@ -1,0 +1,40 @@
+
+=== Player 1 Deck ===
+65 Bomb Tower (4 elixir, 65 ATK, 15 DEF, Rare Building, AntiTank)
+70 Inferno Dragon (4 elixir, 60 ATK, 50 DEF, Legendary AntiAir, AntiAir)
+40 Minions (3 elixir, 30 ATK, 30 DEF, Common CheapAntiAir, CheapAntiAir)
+50 Night Witch (4 elixir, 55 ATK, 70 DEF, Legendary MiniTank, AntiTank)
+75 Elite Barbarians (6 elixir, 75 ATK, 80 DEF, Common HeavyTank, AntiTank)
+35 Princess (3 elixir, 30 ATK, 35 DEF, Legendary CheapAntiAir, CheapAntiAir)
+20 Earthquake (3 elixir, 0 ATK, 60 DEF, Rare BigSpell, BigSpell)
+70 Sparky (6 elixir, 75 ATK, 90 DEF, Legendary HeavyTank, AntiTank)
+
+=== Player 2 Deck ===
+55 Ice Wizard (3 elixir, 40 ATK, 15 DEF, Legendary CheapAntiAir, CheapAntiAir)
+45 Dart Goblin (3 elixir, 30 ATK, 45 DEF, Rare CheapAntiAir, CheapAntiAir)
+70 Musketeer (4 elixir, 50 ATK, 60 DEF, Rare AntiAir, AntiAir)
+70 Prince (5 elixir, 75 ATK, 75 DEF, Epic HeavyTank, MiniTank)
+40 Bomber (2 elixir, 30 ATK, 30 DEF, Common Distraction, TankSupport)
+50 Guards (3 elixir, 40 ATK, 35 DEF, Epic Distraction, Distraction)
+25 Fire Spirit (1 elixir, 15 ATK, 25 DEF, Common Distraction, Distraction)
+30 Skeletons (1 elixir, 10 ATK, 20 DEF, Common Distraction, Distraction)
+
+=== Player 1 Deck ===
+80 Zappies (4 elixir, 45 ATK, 45 DEF, Rare AntiAir, AntiAir)
+55 Tombstone (3 elixir, 50 ATK, 15 DEF, Rare Building, Distraction)
+70 Sparky (6 elixir, 75 ATK, 90 DEF, Legendary HeavyTank, AntiTank)
+35 Ice Spirit (1 elixir, 15 ATK, 15 DEF, Common Distraction, Distraction)
+65 Electro Wizard (4 elixir, 50 ATK, 55 DEF, Legendary AntiAir, AntiAir)
+50 Mega Minion (3 elixir, 40 ATK, 30 DEF, Rare CheapAntiAir, CheapAntiAir)
+75 Cannon Cart (5 elixir, 75 ATK, 70 DEF, Epic HeavyTank, TankSupport)
+40 Barbarian Barrel (2 elixir, 20 ATK, 30 DEF, Epic SmallSpell, SmallSpell)
+
+=== Player 2 Deck ===
+25 Miner (3 elixir, 50 ATK, 45 DEF, Legendary MiniTank, MiniTank)
+85 Rocket (6 elixir, 0 ATK, 85 DEF, Rare BigSpell, BigSpell)
+70 Lightning (6 elixir, 0 ATK, 90 DEF, Epic BigSpell, BigSpell)
+30 Skeletons (1 elixir, 10 ATK, 20 DEF, Common Distraction, Distraction)
+75 Witch (5 elixir, 60 ATK, 75 DEF, Epic AntiAir, AntiAir)
+40 Royal Hogs (5 elixir, 70 ATK, 80 DEF, Rare WinCon, WinCon)
+80 Mega Knight (7 elixir, 110 ATK, 90 DEF, Legendary HeavyTank, HeavyTank)
+40 Archers (3 elixir, 35 ATK, 35 DEF, Common CheapAntiAir, CheapAntiAir)
