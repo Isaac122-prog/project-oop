@@ -83,30 +83,38 @@ double DeckGrader::gradeStrength(const Deck& deck) {
 
 double DeckGrader::gradeBalance(const Deck& deck) {
     std::unordered_map<std::string, int> roleCount;
-
+    
     for (const auto& card : deck.getCards()) {
         roleCount[card.getCardRole()]++;
     }
 
     double balanceScore = 0;
 
-    for (const auto& [role, scores] : roleScores) {
-        int count = roleCount.count(role) ? roleCount[role] : 0;
-        int score = 0;
+    for (auto it = roleScores.begin(); it != roleScores.end(); ++it) {
+        const std::string& role = it->first;
+        auto& roleMap = it->second;
 
-        if (scores.count(count))
-            score = scores.at(count);
+        int count = 0;
+        if (roleCount.count(role))
+            count = roleCount[role];
+
+        int score = 0;
+        if (roleMap.count(count))
+            score = roleMap[count];
         else {
             int maxCount = 0, lastScore = 0;
-            for (auto& [c, s] : scores)
-                if (c > maxCount) { maxCount = c; lastScore = s; }
+            for (auto rit = roleMap.begin(); rit != roleMap.end(); ++rit) {
+                if (rit->first > maxCount) {
+                    maxCount = rit->first;
+                    lastScore = rit->second;
+                }
+            }
             score = lastScore;
         }
 
         balanceScore += score;
     }
 
-    double balance = balanceScore/90*100;
+    double balance = balanceScore / 90.0 * 100.0;
     return balance;
-
 }
