@@ -5,7 +5,7 @@
 #include <string>
 #include "Cards.h"
 
-class Deck: public Cards{
+class Deck{
 
 private:
     std::vector<Cards> deckList;

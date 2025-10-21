@@ -72,7 +72,7 @@ void Cards::display() const{
               << ", Attack: " << Attack
               << ", Defence: " << Defence 
               << ", Health: " << Health
-              << ", tripple Draft Role" << Trip_Role
+              << ", Triple Draft Role" << Trip_Role
               << ", Role: " << Role
               << ", Rarity: " << Rarity << std::endl;
 }
