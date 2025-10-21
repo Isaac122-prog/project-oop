@@ -34,6 +34,9 @@ double DeckGrader::gradeDeck(const Deck& deck){
     double attackScore = gradeAttack(deck);
     double defenseScore = gradeDefense(deck);
 
+    double overallScore = 0;
+    overallScore = (attackScore + defenseScore)*balanceScore/100;
+    return overallScore;
 }
 
 double DeckGrader::gradeAttack(const Deck& deck){
@@ -58,11 +61,52 @@ double DeckGrader::gradeDefense(const Deck& deck){
     }
     double totalDefense = 0;
     for (const auto& c : cards){
-        totalDefense = totalDefense + c.getCardAttack();
+        totalDefense = totalDefense + c.getCardDefence();
     }
     double defense = totalDefense / elixir; 
     return defense;
 }
 
-double DeckGrader::gradeBalance(const Deck& deck){
+double DeckGrader::gradeStrength(const Deck& deck) {
+    double elixir = getAvgElixir(deck);
+    const auto& cards = deck.getCards();
+    if (cards.empty()){
+        return 0.0;
+    }
+    double totalStrength = 0;
+    for (const auto& c : cards){
+        totalStrength = totalStrength + c.getCardHealth();
+    }
+    double strength = totalStrength / elixir; 
+    return strength;
+}
+
+double DeckGrader::gradeBalance(const Deck& deck) {
+    std::unordered_map<std::string, int> roleCount;
+
+    for (const auto& card : deck.getCards()) {
+        roleCount[card.getCardRole()]++;
+    }
+
+    double balanceScore = 0;
+
+    for (const auto& [role, scores] : roleScores) {
+        int count = roleCount.count(role) ? roleCount[role] : 0;
+        int score = 0;
+
+        if (scores.count(count))
+            score = scores.at(count);
+        else {
+            int maxCount = 0, lastScore = 0;
+            for (auto& [c, s] : scores)
+                if (c > maxCount) { maxCount = c; lastScore = s; }
+            score = lastScore;
+        }
+
+        balanceScore += score;
+    }
+
+    double balance = balanceScore/90*100;
+    return balance;
+
 }

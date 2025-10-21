@@ -13,6 +13,7 @@ class DeckGrader {
         double gradeDeck(const Deck& deck);
         double gradeAttack(const Deck& deck);
         double gradeDefense(const Deck& deck);
+        double gradeStrength(const Deck& deck);
         double gradeBalance(const Deck& deck);
         double getAvgElixir(const Deck& deck);
 };

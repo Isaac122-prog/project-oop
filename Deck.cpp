@@ -45,3 +45,5 @@ bool Deck::isFull() const{
 const std::vector<Cards>& Deck::getCards() const {
     return deckList;
 }
+
+Deck::Deck() {}
