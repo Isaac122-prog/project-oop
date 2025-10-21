@@ -18,3 +18,23 @@
 60 Baby Dragon (4 elixir, 60 ATK, 60 DEF, Epic AntiAir, AntiAir)
 65 Electro Wizard (4 elixir, 50 ATK, 55 DEF, Legendary AntiAir, AntiAir)
 70 Musketeer (4 elixir, 50 ATK, 60 DEF, Rare AntiAir, AntiAir)
+
+=== Player 1 Deck ===
+30 Goblin Barrel (3 elixir, 30 ATK, 60 DEF, Epic WinCon, WinCon)
+55 Fireball (4 elixir, 0 ATK, 65 DEF, Rare BigSpell, BigSpell)
+40 Barbarian Barrel (2 elixir, 20 ATK, 30 DEF, Epic SmallSpell, SmallSpell)
+30 Royal Giant (6 elixir, 100 ATK, 90 DEF, Common WinCon, WinCon)
+30 Zap (2 elixir, 0 ATK, 30 DEF, Common SmallSpell, SmallSpell)
+25 Fire Spirit (1 elixir, 15 ATK, 25 DEF, Common Distraction, Distraction)
+65 Bomb Tower (4 elixir, 65 ATK, 15 DEF, Rare Building, AntiTank)
+20 Hog Rider (4 elixir, 70 ATK, 80 DEF, Rare WinCon, WinCon)
+
+=== Player 2 Deck ===
+50 Golem (8 elixir, 150 ATK, 110 DEF, Epic WinCon, WinCon)
+45 Arrows (3 elixir, 0 ATK, 35 DEF, Common SmallSpell, SmallSpell)
+60 Lava Hound (7 elixir, 120 ATK, 80 DEF, Legendary WinCon, WinCon)
+25 Miner (3 elixir, 50 ATK, 45 DEF, Legendary MiniTank, MiniTank)
+70 Lightning (6 elixir, 0 ATK, 90 DEF, Epic BigSpell, BigSpell)
+60 Poison (4 elixir, 0 ATK, 60 DEF, Epic BigSpell, BigSpell)
+80 Bowler (5 elixir, 80 ATK, 60 DEF, Epic HeavyTank, TankSupport)
+20 Earthquake (3 elixir, 0 ATK, 60 DEF, Rare BigSpell, BigSpell)
