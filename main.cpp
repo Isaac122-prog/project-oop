@@ -5,6 +5,7 @@
 #include <limits>
 #include "CardList.h"
 #include "Cards.h"
+#include "TripleDraft.h"
 
 void clearScreen() {
 #ifdef _WIN32
@@ -29,7 +30,7 @@ void mainMenu(CardList& CardListClass){
             std::cout << "1. Cards Database\n";
             std::cout << "2. Manage Cards\n";
             std::cout << "3. Deck Grader\n";
-            std::cout << "4. Tripple Draft\n";
+            std::cout << "4. Triple Draft\n";
             std::cout << "5. Exit\n";
             std::cout << "Enter choice: ";
             std::cin >> choice;
@@ -75,7 +76,6 @@ void mainMenu(CardList& CardListClass){
                     break;
                 }
             }
-
                 if(CardChoice == 1){
                     int He;
                     int Att;
@@ -152,14 +152,16 @@ void mainMenu(CardList& CardListClass){
                     }
 
                     while (true){
-                        std::cout << "Enter Tripple Draft Role: ";
+                        std::cout << "Enter Triple Draft Role: ";
                         std::getline(std::cin, T_RoleRaw);
-                        if(RoleRaw == "Win Con" || RoleRaw == "Small Spell" || RoleRaw == "Big Spell" || RoleRaw == ""){
+                        if(T_RoleRaw == "WinCon" || T_RoleRaw == "SmallSpell" || T_RoleRaw == "BigSpell" || T_RoleRaw == "AntiAir" || T_RoleRaw == "CheapAntiAir" || T_RoleRaw == "tankSupport" 
+                        || T_RoleRaw == "AntiTank" || T_RoleRaw == "MiniTank" || T_RoleRaw == "Distraction"){
                             T_Role = T_RoleRaw;
                             break;
                         }
                         else{
                             std::cout << "invalid input. Please enter one the options\n";
+                            std::cout << "WinCon, SmallSpell, BigSpell, AntiAir, CheapAntiAir, TankSupport, AntiTank, MiniTank, Distraction\n";
                         }
                     }
 
@@ -167,7 +169,8 @@ void mainMenu(CardList& CardListClass){
                     while(true){
                         std::cout << "Enter Role: ";
                         std::getline(std::cin, RoleRaw);
-                        if(RoleRaw == "MiniTank" || RoleRaw == "Heavey Tank"){
+                        if(RoleRaw == "WinCon" || RoleRaw == "SmallSpell" || RoleRaw == "BigSpell" || RoleRaw == "AntiAir" || RoleRaw == "CheapAntiAir" || RoleRaw == "HeavyTank"
+                        || RoleRaw == "MiniTank" || RoleRaw == "Building" || RoleRaw == "Distraction"){
                             r = RoleRaw;
                             break;
                         }
@@ -227,6 +230,7 @@ void mainMenu(CardList& CardListClass){
                             Cards newCard(Elix, He, Att, Def, n, T_Role, r, rare);
                             CardListClass.addCards(newCard);
                             count++;
+                            std::cout << "Imported: " << n << "\n";
                         }
 
                         file.close();
@@ -237,6 +241,7 @@ void mainMenu(CardList& CardListClass){
             }
         }
 }
+
 
 
 int main() {
