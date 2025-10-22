@@ -1,0 +1,150 @@
+--Triple Draft--
+=== Welcome to Two-Player Triple Draft (8 cards each) ===
+
+=== Player 1 Draft 1 of 8 ===
+1: Witch (5 Elixir, 60Health, 75 Attack, 75 Defence, Epic AntiAir, AntiAir)
+2: BabyDragon (4 Elixir, 60Health, 60 Attack, 60 Defence, Epic AntiAir, AntiAir)
+3: MiniPEKKA (4 Elixir, 70Health, 50 Attack, 70 Defence, Rare HeavyTank, AntiTank)
+Enter your choice (1-3): 1
+
+=== Player 1 Draft 2 of 8 ===
+1: Earthquake (3 Elixir, 0Health, 60 Attack, 20 Defence, Rare BigSpell, BigSpell)
+2: Goblins (2 Elixir, 30Health, 30 Attack, 30 Defence, Common Distraction, Distraction)
+3: Rocket (6 Elixir, 0Health, 85 Attack, 85 Defence, Rare BigSpell, BigSpell)
+Enter your choice (1-3): 1
+
+=== Player 1 Draft 3 of 8 ===
+1: InfernoDragon (4 Elixir, 60Health, 50 Attack, 70 Defence, Legendary AntiAir, AntiAir)
+2: SpearGoblins (2 Elixir, 25Health, 30 Attack, 30 Defence, Common CheapAntiAir, CheapAntiAir)
+3: Archers (3 Elixir, 35Health, 35 Attack, 40 Defence, Common CheapAntiAir, CheapAntiAir)
+Enter your choice (1-3): 1
+
+=== Player 1 Draft 4 of 8 ===
+1: PEKKA (7 Elixir, 100Health, 80 Attack, 100 Defence, Epic HeavyTank, AntiTank)
+2: IceSpirit (1 Elixir, 15Health, 15 Attack, 35 Defence, Common Distraction, Distraction)
+3: Cannon (3 Elixir, 50Health, 10 Attack, 50 Defence, Common Building, AntiTank)
+Enter your choice (1-3): 1
+
+=== Player 1 Draft 5 of 8 ===
+1: MegaKnight (7 Elixir, 110Health, 90 Attack, 80 Defence, Legendary HeavyTank, HeavyTank)
+2: Bowler (5 Elixir, 80Health, 60 Attack, 80 Defence, Epic HeavyTank, TankSupport)
+3: MegaMinion (3 Elixir, 40Health, 30 Attack, 50 Defence, Rare CheapAntiAir, CheapAntiAir)
+Enter your choice (1-3): 1
+
+=== Player 1 Draft 6 of 8 ===
+1: GoblinGang (3 Elixir, 30Health, 45 Attack, 45 Defence, Common Distraction, Distraction)
+2: IceWizard (3 Elixir, 40Health, 15 Attack, 55 Defence, Legendary CheapAntiAir, CheapAntiAir)
+3: Arrows (3 Elixir, 0Health, 35 Attack, 45 Defence, Common SmallSpell, SmallSpell)
+Enter your choice (1-3): 1
+
+=== Player 1 Draft 7 of 8 ===
+1: IceWizard (3 Elixir, 40Health, 15 Attack, 55 Defence, Legendary CheapAntiAir, CheapAntiAir)
+2: SpearGoblins (2 Elixir, 25Health, 30 Attack, 30 Defence, Common CheapAntiAir, CheapAntiAir)
+3: Wizard (5 Elixir, 50Health, 70 Attack, 80 Defence, Rare AntiAir, AntiAir)
+Enter your choice (1-3): 1
+
+=== Player 1 Draft 8 of 8 ===
+1: MegaMinion (3 Elixir, 40Health, 30 Attack, 50 Defence, Rare CheapAntiAir, CheapAntiAir)
+2: Tombstone (3 Elixir, 50Health, 15 Attack, 55 Defence, Rare Building, Distraction)
+3: BabyDragon (4 Elixir, 60Health, 60 Attack, 60 Defence, Epic AntiAir, AntiAir)
+Enter your choice (1-3): 1
+
+=== Player 2 Draft 1 of 8 ===
+1: BabyDragon (4 Elixir, 60Health, 60 Attack, 60 Defence, Epic AntiAir, AntiAir)
+2: Bowler (5 Elixir, 80Health, 60 Attack, 80 Defence, Epic HeavyTank, TankSupport)
+3: SpearGoblins (2 Elixir, 25Health, 30 Attack, 30 Defence, Common CheapAntiAir, CheapAntiAir)
+Enter your choice (1-3): 1
+
+=== Player 2 Draft 2 of 8 ===
+1: Cannon (3 Elixir, 50Health, 10 Attack, 50 Defence, Common Building, AntiTank)
+2: GoblinBarrel (3 Elixir, 30Health, 60 Attack, 30 Defence, Epic WinCon, WinCon)
+3: TheLog (2 Elixir, 0Health, 25 Attack, 35 Defence, Legendary SmallSpell, SmallSpell)
+Enter your choice (1-3): 1
+
+=== Player 2 Draft 3 of 8 ===
+1: IceGolem (2 Elixir, 70Health, 15 Attack, 35 Defence, Rare Distraction, MiniTank)
+2: Archers (3 Elixir, 35Health, 35 Attack, 40 Defence, Common CheapAntiAir, CheapAntiAir)
+3: Bowler (5 Elixir, 80Health, 60 Attack, 80 Defence, Epic HeavyTank, TankSupport)
+Enter your choice (1-3): 1
+
+=== Player 2 Draft 4 of 8 ===
+1: IceSpirit (1 Elixir, 15Health, 15 Attack, 35 Defence, Common Distraction, Distraction)
+2: FireSpirit (1 Elixir, 15Health, 25 Attack, 25 Defence, Common Distraction, Distraction)
+3: BombTower (4 Elixir, 65Health, 15 Attack, 65 Defence, Rare Building, AntiTank)
+Enter your choice (1-3): 1
+
+=== Player 2 Draft 5 of 8 ===
+1: Archers (3 Elixir, 35Health, 35 Attack, 40 Defence, Common CheapAntiAir, CheapAntiAir)
+2: SpearGoblins (2 Elixir, 25Health, 30 Attack, 30 Defence, Common CheapAntiAir, CheapAntiAir)
+3: TheLog (2 Elixir, 0Health, 25 Attack, 35 Defence, Legendary SmallSpell, SmallSpell)
+Enter your choice (1-3): 1
+
+=== Player 2 Draft 6 of 8 ===
+1: GoblinBarrel (3 Elixir, 30Health, 60 Attack, 30 Defence, Epic WinCon, WinCon)
+2: Lightning (6 Elixir, 0Health, 90 Attack, 70 Defence, Epic BigSpell, BigSpell)
+3: FireSpirit (1 Elixir, 15Health, 25 Attack, 25 Defence, Common Distraction, Distraction)
+Enter your choice (1-3): 1
+
+=== Player 2 Draft 7 of 8 ===
+1: MiniPEKKA (4 Elixir, 70Health, 50 Attack, 70 Defence, Rare HeavyTank, AntiTank)
+2: HogRider (4 Elixir, 70Health, 80 Attack, 20 Defence, Rare WinCon, WinCon)
+3: Arrows (3 Elixir, 0Health, 35 Attack, 45 Defence, Common SmallSpell, SmallSpell)
+Enter your choice (1-3): 1
+
+=== Player 2 Draft 8 of 8 ===
+1: BombTower (4 Elixir, 65Health, 15 Attack, 65 Defence, Rare Building, AntiTank)
+2: TheLog (2 Elixir, 0Health, 25 Attack, 35 Defence, Legendary SmallSpell, SmallSpell)
+3: Giant (5 Elixir, 120Health, 80 Attack, 30 Defence, Rare WinCon, WinCon)
+Enter your choice (1-3): 1
+
+=== Player 1 Deck ===
+Witch (5 elixir, 75 ATK, 75 DEF, Epic AntiAir, AntiAir)
+Earthquake (3 elixir, 60 ATK, 20 DEF, Rare BigSpell, BigSpell)
+InfernoDragon (4 elixir, 50 ATK, 70 DEF, Legendary AntiAir, AntiAir)
+PEKKA (7 elixir, 80 ATK, 100 DEF, Epic HeavyTank, AntiTank)
+MegaKnight (7 elixir, 90 ATK, 80 DEF, Legendary HeavyTank, HeavyTank)
+GoblinGang (3 elixir, 45 ATK, 45 DEF, Common Distraction, Distraction)
+IceWizard (3 elixir, 15 ATK, 55 DEF, Legendary CheapAntiAir, CheapAntiAir)
+MegaMinion (3 elixir, 30 ATK, 50 DEF, Rare CheapAntiAir, CheapAntiAir)
+
+=== Player 2 Deck ===
+BabyDragon (4 elixir, 60 ATK, 60 DEF, Epic AntiAir, AntiAir)
+Cannon (3 elixir, 10 ATK, 50 DEF, Common Building, AntiTank)
+IceGolem (2 elixir, 15 ATK, 35 DEF, Rare Distraction, MiniTank)
+IceSpirit (1 elixir, 15 ATK, 35 DEF, Common Distraction, Distraction)
+Archers (3 elixir, 35 ATK, 40 DEF, Common CheapAntiAir, CheapAntiAir)
+GoblinBarrel (3 elixir, 60 ATK, 30 DEF, Epic WinCon, WinCon)
+MiniPEKKA (4 elixir, 50 ATK, 70 DEF, Rare HeavyTank, AntiTank)
+BombTower (4 elixir, 15 ATK, 65 DEF, Rare Building, AntiTank)
+
+
+
+--- Player 1 Deck Grading ---
+Average Elixir: 4.4
+Balance Score: 78.9
+Attack Score: 101.7
+Defense Score: 113.1
+Strength Score: 100.6
+Overall Deck Score: 169.5
+⭐️⭐️
+
+
+--- Player 2 Deck Grading ---
+Average Elixir: 3.0
+Balance Score: 87.8
+Attack Score: 86.7
+Defense Score: 128.3
+Strength Score: 131.7
+Overall Deck Score: 188.7
+⭐️⭐️⭐️
+
+Draft complete! Results saved to draft_results.txt
+
+
+--- Player 1 Overall Deck Score: 169.5 ---
+--- Player 2 Overall Deck Score: 188.7 ---
+
+🏆 Player 2 wins!
+
+Draft complete! Results saved to draft_results.txt
+Press Enter to continue...
