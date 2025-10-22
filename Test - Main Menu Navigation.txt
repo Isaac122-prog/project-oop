@@ -1,0 +1,59 @@
+-- Main Menu Navigation -- 
+
+Initial State:
+===== CLASH ROYALE ====
+1. Cards Database
+2. Manage Cards
+3. Deck Grader
+4. Triple Draft
+5. Exit
+Enter choice:
+
+----------------------
+Cards Database:
+Input: 1
+
+Expected Output:
+==== Cards Database ====
+No cards in database.
+Press Enter to continue...
+
+----------------------
+Manage Cards:
+Input: 2
+
+Expected Ouput:
+==== Card Database Menu ====
+1. Add Cards
+2. Delete Cards
+3. Insert file
+4. Print Card Database
+5. Back to main menu
+Enter choice: 
+
+----------------------
+Deck Grader:
+Input: 3
+
+Expected Output:
+==== Deck Grader ====
+Cards loaded from cards.txt
+
+*Lists all cards from cards.txt*
+
+Create your deck (pick 8 cards by name):
+Enter card name #1: 
+
+----------------------
+Triple Draft:
+Input: 4
+
+Expected Output:
+
+----------------------
+Exit:
+Input: 5
+
+Expected Output:
+Exiting...
+*Exits program*

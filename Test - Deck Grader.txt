@@ -1,0 +1,62 @@
+-- Deck Grader Navigation -- 
+
+Initial State:
+==== Deck Grader ====
+Cards loaded from cards.txt
+
+*Card Database*
+
+Create your deck (pick 8 cards by name):
+Enter card name #1: 
+
+----------------------
+Expected Output: 
+Create your deck (pick 8 cards by name):
+Enter card name #1: TheLog
+TheLog added to deck.
+Enter card name #2: Skeletons
+Skeletons added to deck.
+Enter card name #3: HogRider
+HogRider added to deck.
+Enter card name #4: Musketeer
+Musketeer added to deck.
+Enter card name #5: IceSpirit
+IceSpirit added to deck.
+Enter card name #6: Fireball
+Fireball added to deck.
+Enter card name #7: Cannon
+Cannon added to deck.
+Enter card name #8: IceGolem
+IceGolem added to deck.
+
+Output:
+User enters all cards to make a deck to be graded.
+Program then outputs the deck's contents and the grade. 
+
+Eg.
+--- Deck Contents ---
+Deck contains 8 cards:
+Name: TheLog, Elixir: 2, Attack: 25, Defence: 35, Health: 0, Triple Draft Role: SmallSpell, Role: SmallSpell, Rarity: Legendary
+Name: Skeletons, Elixir: 1, Attack: 20, Defence: 30, Health: 10, Triple Draft Role: Distraction, Role: Distraction, Rarity: Common
+Name: IceSpirit, Elixir: 1, Attack: 15, Defence: 35, Health: 15, Triple Draft Role: Distraction, Role: Distraction, Rarity: Common
+Name: Musketeer, Elixir: 4, Attack: 60, Defence: 70, Health: 50, Triple Draft Role: AntiAir, Role: AntiAir, Rarity: Rare
+Name: Cannon, Elixir: 3, Attack: 10, Defence: 50, Health: 50, Triple Draft Role: AntiTank, Role: Building, Rarity: Common
+Name: Fireball, Elixir: 4, Attack: 65, Defence: 55, Health: 0, Triple Draft Role: BigSpell, Role: BigSpell, Rarity: Rare
+Name: IceGolem, Elixir: 2, Attack: 15, Defence: 35, Health: 70, Triple Draft Role: MiniTank, Role: Distraction, Rarity: Rare
+Name: HogRider, Elixir: 4, Attack: 80, Defence: 20, Health: 70, Triple Draft Role: WinCon, Role: WinCon, Rarity: Rare
+
+--- Deck Grading ---
+Average Elixir: 2.6
+Balance Score: 87.8
+Attack Score: 110.5
+Defense Score: 125.7
+Strength Score: 101.0
+Overall Deck Score: 207.3
+⭐️⭐️⭐️⭐️
+Press Enter to continue...
+
+When a card is entered which is not apart of database, the program displays:
+Enter card name #1: a
+Card not found. Try again.
+Enter card name #1: 
+

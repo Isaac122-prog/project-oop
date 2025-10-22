@@ -1,0 +1,126 @@
+-- Card Database Navigation -- 
+
+Initial State:
+==== Card Database Menu ====
+1. Add Cards
+2. Delete Cards
+3. Insert file
+4. Print Card Database
+5. Back to main menu
+Enter choice: 
+
+----------------------
+Add Cards:
+Input: 1
+
+Expected Output: 
+Enter name:
+Enter Attack:
+Enter Defence:
+Enter Health:
+Enter Elixir:
+Enter Triple Draft Role:
+Enter Role:
+Enter Rarity:
+
+Output: 
+Clears card database menu, prints out info required to add a card. 
+From this, the user can add additional cards to the card database. 
+
+Eg. 
+
+Enter name: FireCracker
+Enter Attack: 40
+Enter Defence: 20
+Enter Health: 30
+Enter Elixir: 3
+Enter Triple Draft Role: CheapAntiAir
+Enter Role: CheapAntiAir
+Enter Rarity: Common
+Card added.
+
+When a non-integer value is entered for an integer required response (attack, defence, health, elixir) the program displays:
+Invalid input. Please enter a number.
+
+When a role is entered which is not part of possible selections, the program displays:
+Invalid input. Please enter one of the options:
+WinCon, SmallSpell, BigSpell, AntiAir, CheapAntiAir, TankSupport, AntiTank, MiniTank, Distraction
+
+When a rarity is entered which is not part of possible selections, the program displays:
+
+----------------------
+Delete Cards:
+Input: 2
+
+Expected Output:
+Enter the name of the card to remove: 
+
+Output: 
+Clears card database menu, prints out info required to delete a card. 
+From this, the user can remove cards from the card database. 
+
+Eg.
+Enter the name of the card to remove: FireCracker
+Card removed.
+Press Enter to continue...
+
+When a card is entered which is not in database, the program displays:
+Enter the name of the card to remove: blank
+Card not found.
+Press Enter to continue...
+
+----------------------
+Insert File:
+Input: 3
+
+Expected Output:
+Enter file name (e.g. cards.txt): 
+Error: Could not open file asd
+
+Output: 
+Clears card database menu, prints out info required to insert a file. 
+From this, the user can insert files to add cards to the card database.
+
+Eg.
+Enter file name (e.g. cards.txt): Cards.txt
+Cards loaded from Cards.txt
+Press Enter to continue...
+
+When a file is entered which is not found, the program displays:
+Enter file name (e.g. cards.txt): a
+Error: Could not open file a
+Press Enter to continue...
+
+----------------------
+Print Card Database:
+Input: 4
+
+Expected Output: 
+Enter file name to save (e.g. cards_output.txt): 
+
+Output: 
+Clears card database menu, prints out info required to print card database to a file. 
+From this, the user can enter a file name which the cards from the database will be printed to.
+
+Eg.
+Enter file name to save (e.g. cards_output.txt): cards_output.txt
+Card database successfully written to cards_output.txt
+Press Enter to continue...
+
+----------------------
+Back to main menu:
+Input: 5
+
+Expected Output:
+===== CLASH ROYALE ====
+1. Cards Database
+2. Manage Cards
+3. Deck Grader
+4. Triple Draft
+5. Exit
+Enter choice: 
+
+Output: 
+Clears card database menu, prints out main menu screen.
+
+----------------------
