@@ -284,7 +284,7 @@ void mainMenu(CardList& CardListClass) {
                     std::cout << "⭐️\n";
                 else if (totalScore < 175)
                     std::cout << "⭐️⭐️\n";
-                else if (totalScore < 100)
+                else if (totalScore < 200)
                     std::cout << "⭐️⭐️⭐️\n";
                 else if (totalScore < 225)
                     std::cout << "⭐️⭐️⭐️⭐️\n";
