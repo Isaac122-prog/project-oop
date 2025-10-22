@@ -1,11 +1,10 @@
 #ifndef DECKGRADER_H
 #define DECKGRADER_H
-
 #include <unordered_map>
 #include <string>
 #include "Deck.h"
 
-class DeckGrader : public Deck {
+class DeckGrader{
     private:
         std::unordered_map<std::string, std::unordered_map<int, int>> roleScores;
     public:

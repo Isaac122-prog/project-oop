@@ -61,7 +61,7 @@ void mainMenu(CardList& CardListClass) {
             // ===== Case 2 =====
             case 2: {
                 int CardChoice;
-                while (true) {
+                while (true) {  // Card Database Menu loop
                     clearScreen();
                     std::cout << "==== Card Database Menu ====\n";
                     std::cout << "1. Add Cards\n";
@@ -69,163 +69,171 @@ void mainMenu(CardList& CardListClass) {
                     std::cout << "3. Insert file\n";
                     std::cout << "4. Print Card Database\n";
                     std::cout << "5. Back to main menu\n";
-                    std::cout << "Enter choice: ";
-                    std::cin >> CardChoice;
 
-                    if (std::cin.fail()) {
+                    try {
+                        std::cout << "Enter choice: ";
+                        std::cin >> CardChoice;
+
+                        if (std::cin.fail()) {
+                            throw std::runtime_error("Invalid input. Please enter an integer.");
+                        }
+
+                        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+                        if (CardChoice == 5) break; // back to main menu
+
+                        if (CardChoice == 1) {
+                            // ===== Add Card =====
+                            int He, Att, Def, Elix;
+                            std::string n, rare, r, T_Role;
+                            std::string RoleRaw, RareRaw, T_RoleRaw;
+
+                            clearScreen();
+                            std::cout << "Enter name: ";
+                            std::getline(std::cin, n);
+
+                            // Attack
+                            while (true) {
+                                std::cout << "Enter Attack: ";
+                                std::cin >> Att;
+                                if (std::cin.fail()) {
+                                    std::cin.clear();
+                                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                                    std::cout << "Invalid input. Please enter a number.\n";
+                                } else {
+                                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                                    break;
+                                }
+                            }
+
+                            // Defence
+                            while (true) {
+                                std::cout << "Enter Defence: ";
+                                std::cin >> Def;
+                                if (std::cin.fail()) {
+                                    std::cin.clear();
+                                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                                    std::cout << "Invalid input. Please enter a number.\n";
+                                } else {
+                                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                                    break;
+                                }
+                            }
+
+                            // Health
+                            while (true) {
+                                std::cout << "Enter Health: ";
+                                std::cin >> He;
+                                if (std::cin.fail()) {
+                                    std::cin.clear();
+                                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                                    std::cout << "Invalid input. Please enter a number.\n";
+                                } else {
+                                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                                    break;
+                                }
+                            }
+
+                            // Elixir
+                            while (true) {
+                                std::cout << "Enter Elixir: ";
+                                std::cin >> Elix;
+                                if (std::cin.fail()) {
+                                    std::cin.clear();
+                                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                                    std::cout << "Invalid input. Please enter a number.\n";
+                                } else {
+                                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                                    break;
+                                }
+                            }
+
+                            // Triple Draft Role
+                            while (true) {
+                                std::cout << "Enter Triple Draft Role: ";
+                                std::getline(std::cin, T_RoleRaw);
+                                if (T_RoleRaw == "WinCon" || T_RoleRaw == "SmallSpell" || T_RoleRaw == "BigSpell" ||
+                                    T_RoleRaw == "AntiAir" || T_RoleRaw == "CheapAntiAir" || T_RoleRaw == "TankSupport" ||
+                                    T_RoleRaw == "AntiTank" || T_RoleRaw == "MiniTank" || T_RoleRaw == "Distraction") {
+                                    T_Role = T_RoleRaw;
+                                    break;
+                                } else {
+                                    std::cout << "Invalid input. Options: WinCon, SmallSpell, BigSpell, AntiAir, "
+                                            << "CheapAntiAir, TankSupport, AntiTank, MiniTank, Distraction\n";
+                                }
+                            }
+
+                            // Role
+                            while (true) {
+                                std::cout << "Enter Role: ";
+                                std::getline(std::cin, RoleRaw);
+                                if (RoleRaw == "WinCon" || RoleRaw == "SmallSpell" || RoleRaw == "BigSpell" ||
+                                    RoleRaw == "AntiAir" || RoleRaw == "CheapAntiAir" || RoleRaw == "HeavyTank" ||
+                                    RoleRaw == "MiniTank" || RoleRaw == "Building" || RoleRaw == "Distraction") {
+                                    r = RoleRaw;
+                                    break;
+                                } else {
+                                    std::cout << "Invalid input. Options: WinCon, SmallSpell, BigSpell, AntiAir, "
+                                            << "CheapAntiAir, TankSupport, AntiTank, MiniTank, Distraction\n";
+                                }
+                            }
+
+                            // Rarity
+                            while (true) {
+                                std::cout << "Enter Rarity: ";
+                                std::getline(std::cin, RareRaw);
+                                if (RareRaw == "Common" || RareRaw == "Rare" || RareRaw == "Epic" || RareRaw == "Legendary") {
+                                    rare = RareRaw;
+                                    break;
+                                } else {
+                                    std::cout << "Invalid input. Options: Common, Rare, Epic, Legendary\n";
+                                }
+                            }
+
+                            Cards newCard(Elix, He, Att, Def, n, T_Role, r, rare);
+                            CardListClass.addCards(newCard);
+                            std::cout << "Card added.\n";
+                            pause();
+                        }
+
+                        else if (CardChoice == 2) { // Delete card
+                            std::string n;
+                            std::cout << "Enter the name of the card to remove: ";
+                            std::getline(std::cin, n);
+                            if (CardListClass.removeCards(n))
+                                std::cout << "Card removed.\n";
+                            else
+                                std::cout << "Card not found.\n";
+                            pause();
+                        }
+
+                        else if (CardChoice == 3) { // Insert file
+                            std::string filename;
+                            std::cout << "Enter file name (e.g. cards.txt): ";
+                            std::getline(std::cin, filename);
+                            CardListClass.loadFromFile(filename);
+                            pause();
+                        }
+
+                        else if (CardChoice == 4) { // Print file
+                            std::string filename;
+                            std::cout << "Enter file name to save (e.g. cards_output.txt): ";
+                            std::getline(std::cin, filename);
+                            CardListClass.exportToFile(filename);
+                            pause();
+                        }
+
+                        else { // Invalid choice
+                            throw std::runtime_error("Invalid choice. Select 1-5.");
+                        }
+                    }
+                    catch (const std::exception& e) {
                         std::cin.clear();
-                        clearScreen();
                         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                        std::cout << "Invalid input. Please enter an integer.\n";
-                    } else {
-                        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                        break;
+                        std::cout << "Error: " << e.what() << "\n";
+                        pause();
                     }
-                }
-
-                if (CardChoice == 1) {
-                    int He, Att, Def, Elix;
-                    std::string n, rare, r, T_Role;
-                    std::string RoleRaw, RareRaw, T_RoleRaw;
-
-                    clearScreen();
-                    std::cout << "Enter name: ";
-                    std::getline(std::cin, n);
-
-                    // Attack
-                    while (true) {
-                        std::cout << "Enter Attack: ";
-                        std::cin >> Att;
-                        if (std::cin.fail()) {
-                            std::cin.clear();
-                            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                            std::cout << "Invalid input. Please enter a number.\n";
-                        } else {
-                            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                            break;
-                        }
-                    }
-
-                    // Defence
-                    while (true) {
-                        std::cout << "Enter Defence: ";
-                        std::cin >> Def;
-                        if (std::cin.fail()) {
-                            std::cin.clear();
-                            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                            std::cout << "Invalid input. Please enter a number.\n";
-                        } else {
-                            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                            break;
-                        }
-                    }
-
-                    // Health
-                    while (true) {
-                        std::cout << "Enter Health: ";
-                        std::cin >> He;
-                        if (std::cin.fail()) {
-                            std::cin.clear();
-                            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                            std::cout << "Invalid input. Please enter a number.\n";
-                        } else {
-                            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                            break;
-                        }
-                    }
-
-                    // Elixir
-                    while (true) {
-                        std::cout << "Enter Elixir: ";
-                        std::cin >> Elix;
-                        if (std::cin.fail()) {
-                            std::cin.clear();
-                            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                            std::cout << "Invalid input. Please enter a number.\n";
-                        } else {
-                            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                            break;
-                        }
-                    }
-
-                    // Triple Draft Role
-                    while (true) {
-                        std::cout << "Enter Triple Draft Role: ";
-                        std::getline(std::cin, T_RoleRaw);
-                        if (T_RoleRaw == "WinCon" || T_RoleRaw == "SmallSpell" || T_RoleRaw == "BigSpell" || 
-                            T_RoleRaw == "AntiAir" || T_RoleRaw == "CheapAntiAir" || T_RoleRaw == "TankSupport" || 
-                            T_RoleRaw == "AntiTank" || T_RoleRaw == "MiniTank" || T_RoleRaw == "Distraction") {
-                            T_Role = T_RoleRaw;
-                            break;
-                        } else {
-                            std::cout << "Invalid input. Please enter one of the options:\n";
-                            std::cout << "WinCon, SmallSpell, BigSpell, AntiAir, CheapAntiAir, TankSupport, AntiTank, MiniTank, Distraction\n";
-                        }
-                    }
-
-                    // Role
-                    while (true) {
-                        std::cout << "Enter Role: ";
-                        std::getline(std::cin, RoleRaw);
-                        if (RoleRaw == "WinCon" || RoleRaw == "SmallSpell" || RoleRaw == "BigSpell" || 
-                            RoleRaw == "AntiAir" || RoleRaw == "CheapAntiAir" || RoleRaw == "HeavyTank" || 
-                            RoleRaw == "MiniTank" || RoleRaw == "Building" || RoleRaw == "Distraction") {
-                            r = RoleRaw;
-                            break;
-                        } else {
-                            std::cout << "Invalid input. Please enter one of the options.\n";
-                        }
-                    }
-
-                    // Rarity
-                    while (true) {
-                        std::cout << "Enter Rarity: ";
-                        std::getline(std::cin, RareRaw);
-                        if (RareRaw == "Common" || RareRaw == "Rare" || RareRaw == "Epic" || RareRaw == "Legendary") {
-                            rare = RareRaw;
-                            break;
-                        } else {
-                            std::cout << "Invalid input. Please enter one of the options.\n";
-                        }
-                    }
-
-                    Cards newCard(Elix, He, Att, Def, n, T_Role, r, rare);
-                    CardListClass.addCards(newCard);
-                    std::cout << "Card added.\n";
-                    pause();
-                }
-
-                else if (CardChoice == 2) {
-                    std::string n;
-                    std::cout << "Enter the name of the card to remove: ";
-                    std::cin >> n;
-                    std::cin.ignore();
-                    if (CardListClass.removeCards(n))
-                        std::cout << "Card removed.\n";
-                    else
-                        std::cout << "Card not found.\n";
-                    pause();
-                }
-
-                else if (CardChoice == 3) {
-                    std::string filename;
-                    std::cout << "Enter file name (e.g. cards.txt): ";
-                    std::getline(std::cin, filename);
-                    CardListClass.loadFromFile(filename);
-                    pause();
-                }
-
-                else if (CardChoice == 4) {
-                    std::string filename;
-                    std::cout << "Enter file name to save (e.g. cards_output.txt): ";
-                    std::getline(std::cin, filename);
-                    CardListClass.exportToFile(filename);
-                    pause();
-                }
-
-                else if (CardChoice == 5) {
-                    break;
-                }
+                } // end of Card Database Menu loop
                 break;
             }
 
@@ -287,15 +295,14 @@ void mainMenu(CardList& CardListClass) {
                 pause();
                 break;
             }
+                // ===== Exit =====
+                case 5:
+                    std::cout << "Exiting...\n";
+                    return;
 
-            // ===== Exit =====
-            case 5:
-                std::cout << "Exiting...\n";
-                return;
-
-            default:
-                std::cout << "Invalid choice.\n";
-                pause();
+                default:
+                    std::cout << "Invalid choice.\n";
+                    pause();
         }
     }
 }

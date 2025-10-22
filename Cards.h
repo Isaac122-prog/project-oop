@@ -4,7 +4,7 @@
 #include <string>
 
 class Cards {
-    private:
+    protected:
     int Health;
     int Attack;
     int Defence;
