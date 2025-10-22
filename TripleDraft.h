@@ -7,6 +7,7 @@
 struct Card {
     std::string name;
     int elixir;
+    int health;
     int attack;
     int defense;
     std::string rarity;

@@ -8,7 +8,7 @@
 #include <iomanip>
 #include <random>
 
-// ===== Load cards from your space-separated file =====
+// Load cards from your space-separated file
 std::vector<Card> loadCardsFromFile(const std::string& filename) {
     std::vector<Card> cards;
     std::ifstream file(filename);
@@ -21,16 +21,16 @@ std::vector<Card> loadCardsFromFile(const std::string& filename) {
     while (std::getline(file, line)) {
         if (line.empty()) continue;
 
-        std::istringstream iss(line);
+        std::istringstream is(line);
         Card c;
 
-        iss >> c.elixir >> c.attack >> c.defense;
-        iss >> std::ws;
+        is >> c.elixir >> c.health >> c.attack >> c.defense;
+        is >> std::ws;
 
-        // Extract name — may have spaces (e.g. “Royal Giant”)
+        // Extract name
         std::string word;
         std::vector<std::string> parts;
-        while (iss >> word) parts.push_back(word);
+        while (is >> word) parts.push_back(word);
 
         if (parts.size() < 4) continue; // skip malformed lines
 
@@ -52,7 +52,7 @@ std::vector<Card> loadCardsFromFile(const std::string& filename) {
     return cards;
 }
 
-// ===== Random selection =====
+// Random selection
 std::vector<Card> selectRandomCards(std::vector<Card>& allCards, int n) {
     std::vector<Card> selected = allCards;
     std::random_device rd;
@@ -65,14 +65,14 @@ std::vector<Card> selectRandomCards(std::vector<Card>& allCards, int n) {
     return selected;
 }
 
-// ===== Helper for name formatting =====
+// Helper for name formatting
 std::string formatName(const std::string& name, int width = 15) {
     if (name.size() > width - 2)
         return name.substr(0, width - 2) + ".";
     return name;
 }
 
-// ===== Player Draft =====
+// Player Draft
 std::vector<Card> playerDraft(std::vector<Card>& availableCards, const std::string& playerName) {
     std::vector<Card> playerDeck;
     std::random_device rd;
@@ -93,9 +93,10 @@ std::vector<Card> playerDraft(std::vector<Card>& availableCards, const std::stri
         for (int i = 0; i < 3 && i < static_cast<int>(indices.size()); i++) {
             Card &c = availableCards[indices[i]];
             std::cout << i + 1 << ": " << c.name 
-                      << " (" << c.elixir << " elixir, "
-                      << c.attack << " ATK, "
-                      << c.defense << " DEF, "
+                      << " (" << c.elixir << " Elixir, "
+                      << c.health <<  "Health, "
+                      << c.attack << " Attack, "
+                      << c.defense << " Defence, "
                       << c.rarity << " " << c.emoji
                       << ", " << c.role << ")\n";
         }
@@ -120,13 +121,14 @@ std::vector<Card> playerDraft(std::vector<Card>& availableCards, const std::stri
     return playerDeck;
 }
 
-// ===== Save Deck to File =====
+// Save Deck to File
 void saveDeckToFile(const std::string& filename, const std::vector<Card>& deck, const std::string& playerName) {
     std::ofstream out(filename, std::ios::app);
     if (!out) return;
     out << "\n=== " << playerName << " Deck ===\n";
     for (const auto& c : deck)
-        out << c.name << " (" << c.elixir << " elixir, " 
-            << c.attack << " ATK, " << c.defense << " DEF, " 
+        out << c.name << " (" << c.elixir << " Elixir, " 
+            << c.health << "Health, "
+            << c.attack << " Attack, " << c.defense << " Defence, " 
             << c.rarity << " " << c.emoji << ", " << c.role << ")\n";
 }
