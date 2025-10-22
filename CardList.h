@@ -5,17 +5,16 @@
 
 class CardList {
 private:
-    std::vector<Cards> cards;   // renamed from CardList
-    
+    std::vector<Cards> cards; 
 public:
     void addCards(const Cards& card);
     bool removeCards(const std::string& n);
     bool EditCards(std::string n, const Cards& update);
     void listCards() const;
-    int getCardCount() const { return cards.size(); } // optional debug helper
+    int getCardCount() const { return cards.size(); }
     void exportToFile(const std::string& filename) const;
     bool findCardByName(const std::string& name, Cards& result) const;
-    void loadFromFile(const std::string& filename);  // implement in cpp
+    void loadFromFile(const std::string& filename);
     void displayCards() const;
 };
 

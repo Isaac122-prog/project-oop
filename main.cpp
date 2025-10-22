@@ -1,5 +1,5 @@
 #include <iostream>
-#include <fstream>
+#include <fstream> // file writing and reading
 #include <iomanip>
 #include <vector>
 #include <string>
@@ -10,25 +10,27 @@
 #include "DeckGrader.h"
 #include "Deck.h"
 
+// Function to clear the console screen got (from internet)
 void clearScreen() {
 #ifdef _WIN32
-    system("cls");
+    system("cls");  // Clear screen on Windows
 #else
-    system("clear");
+    system("clear");  // Clear screen on Linux/macOS
 #endif
 }
-
+// Function to pause execution until user presses Enter
 void pause() {
     std::cout << "Press Enter to continue...";
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     std::cin.get();
 }
 
+// Main menu function
 void mainMenu(CardList& CardListClass) {
     int choice;
     while (true) {
         clearScreen();
-        while (true) {
+        while (true) { // Input validation loop
             std::cout << "===== CLASH ROYALE ====\n";
             std::cout << "1. Cards Database\n";
             std::cout << "2. Manage Cards\n";
@@ -38,23 +40,24 @@ void mainMenu(CardList& CardListClass) {
             std::cout << "Enter choice: ";
             std::cin >> choice;
 
-            if (std::cin.fail()) {
+            //Error Testing: input Validation
+            if (std::cin.fail()) { // If input is not an integer
                 std::cin.clear();
                 clearScreen();
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
                 std::cout << "Invalid input. Please enter an integer.\n";
             } else {
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                break;
+                break; // valid input, exit validation loop
             }
         }
 
         switch (choice) {
-            // ===== Case 1 =====
+            // case 1: card database
             case 1:
                 clearScreen();
                 std::cout << "==== Cards Database ====\n";
-                CardListClass.listCards();
+                CardListClass.listCards(); // prints and displays the card list
                 pause();
                 break;
 
@@ -69,18 +72,19 @@ void mainMenu(CardList& CardListClass) {
                     std::cout << "3. Insert file\n";
                     std::cout << "4. Print Card Database\n";
                     std::cout << "5. Back to main menu\n";
-
-                    try {
+                    
+                    // Error Handling: first part of try catching
+                    try { // whats in the try bracket has the chance to fail
                         std::cout << "Enter choice: ";
                         std::cin >> CardChoice;
 
-                        if (std::cin.fail()) {
-                            throw std::runtime_error("Invalid input. Please enter an integer.");
+                        if (std::cin.fail()) { //if there is an error
+                            throw std::runtime_error("Invalid input. Please enter an integer."); // there is then a throw which is exception which stops the execution
                         }
-
                         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-                        if (CardChoice == 5) break; // back to main menu
+                        if (CardChoice == 5) 
+                        break; // back to main menu
 
                         if (CardChoice == 1) {
                             // ===== Add Card =====
@@ -88,6 +92,7 @@ void mainMenu(CardList& CardListClass) {
                             std::string n, rare, r, T_Role;
                             std::string RoleRaw, RareRaw, T_RoleRaw;
 
+                            // Name
                             clearScreen();
                             std::cout << "Enter name: ";
                             std::getline(std::cin, n);
@@ -190,13 +195,15 @@ void mainMenu(CardList& CardListClass) {
                                 }
                             }
 
+                            //creates a new card object and adds to database
                             Cards newCard(Elix, He, Att, Def, n, T_Role, r, rare);
                             CardListClass.addCards(newCard);
                             std::cout << "Card added.\n";
                             pause();
                         }
 
-                        else if (CardChoice == 2) { // Delete card
+                        //goes to delete card menu
+                        else if (CardChoice == 2) {
                             std::string n;
                             std::cout << "Enter the name of the card to remove: ";
                             std::getline(std::cin, n);
@@ -227,10 +234,10 @@ void mainMenu(CardList& CardListClass) {
                             throw std::runtime_error("Invalid choice. Select 1-5.");
                         }
                     }
-                    catch (const std::exception& e) {
-                        std::cin.clear();
-                        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                        std::cout << "Error: " << e.what() << "\n";
+                    catch (const std::exception& e) { // this catches the thrown exeception, "e" is the contains the error message
+                        std::cin.clear(); 
+                        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //clear input buffer so isn't stuck 
+                        std::cout << "Error: " << e.what() << "\n"; //prints the "e" message
                         pause();
                     }
                 } // end of Card Database Menu loop
@@ -296,95 +303,97 @@ void mainMenu(CardList& CardListClass) {
             }
 
             // case 4
-case 4: {
-    clearScreen();
-    // randomised
-    srand(static_cast<unsigned int>(time(0)));
+            case 4: {
+                clearScreen();
+                // randomised
+                srand(static_cast<unsigned int>(time(0)));
 
-//load cards
-    std::vector<Card> allCards = loadCardsFromFile("cards.txt");
-    if (allCards.empty()) {
-        std::cerr << "No cards loaded. Check your cards.txt file.\n";
-        pause();
-        break;
-    }
-
-    std::vector<Card> availableCards = selectRandomCards(allCards, 30);
-
-    std::cout << "\n=== Welcome to Two-Player Triple Draft (8 cards each) ===\n";
-
-    std::vector<Card> player1Deck = playerDraft(availableCards, "Player 1");
-    std::vector<Card> player2Deck = playerDraft(availableCards, "Player 2");
-
-    std::cout << "\n=== Player 1 Deck ===\n";
-    for (const auto& c : player1Deck)
-        std::cout << c.name << " (" << c.elixir << " elixir, "
-                  << c.attack << " ATK, "
-                  << c.defense << " DEF, "
-                  << c.rarity << " " << c.emoji
-                  << ", " << c.role << ")\n";
-
-    std::cout << "\n=== Player 2 Deck ===\n";
-    for (const auto& c : player2Deck)
-        std::cout << c.name << " (" << c.elixir << " elixir, "
-                  << c.attack << " ATK, "
-                  << c.defense << " DEF, "
-                  << c.rarity << " " << c.emoji
-                  << ", " << c.role << ")\n";
-
-    saveDeckToFile("draft_results.txt", player1Deck, "Player 1");
-    saveDeckToFile("draft_results.txt", player2Deck, "Player 2");
-
-    // Grade both decks
-    gradeDeckResults(player1Deck, "Player 1");
-    gradeDeckResults(player2Deck, "Player 2");
-
-       std::cout << "\nDraft complete! Results saved to draft_results.txt\n";
-
-    // Convert std::vector<Card> → Deck
-    Deck deck1, deck2;
-    for (const auto& c : player1Deck)
-        deck1.addCard(Cards(c.elixir, c.health, c.attack, c.defense, c.name, c.emoji, c.role, c.rarity));
-    for (const auto& c : player2Deck)
-        deck2.addCard(Cards(c.elixir, c.health, c.attack, c.defense, c.name, c.emoji, c.role, c.rarity));
-
-    DeckGrader grader;
-
-    // Calculate overall scores
-    double player1Score = grader.gradeDeck(deck1);
-    double player2Score = grader.gradeDeck(deck2);
-
-    // Show grading results
-    std::cout << "\n--- Player 1 Overall Deck Score: " << player1Score << " ---\n";
-    std::cout << "--- Player 2 Overall Deck Score: " << player2Score << " ---\n";
-
-    // Determine winner
-    if (player1Score > player2Score)
-        std::cout << "\n🏆 Player 1 wins!\n";
-    else if (player2Score > player1Score)
-        std::cout << "\n🏆 Player 2 wins!\n";
-    else
-        std::cout << "\n🤝 It's a tie!\n";
-
-    std::cout << "\nDraft complete! Results saved to draft_results.txt\n";
-    pause();
-    break;
-}
-
-                // ===== Exit =====
-                case 5:
-                    std::cout << "Exiting...\n";
-                    return;
-
-                default:
-                    std::cout << "Invalid choice.\n";
+            //load cards
+                std::vector<Card> allCards = loadCardsFromFile("cards.txt");
+                if (allCards.empty()) {
+                    std::cerr << "No cards loaded. Check your cards.txt file.\n";
                     pause();
-        }
+                    break;
+                }
+
+                std::vector<Card> availableCards = selectRandomCards(allCards, 30);
+
+                std::cout << "\n=== Welcome to Two-Player Triple Draft (8 cards each) ===\n";
+
+                std::vector<Card> player1Deck = playerDraft(availableCards, "Player 1");
+                std::vector<Card> player2Deck = playerDraft(availableCards, "Player 2");
+
+                std::cout << "\n=== Player 1 Deck ===\n";
+                for (const auto& c : player1Deck)
+                    std::cout << c.name << " (" << c.elixir << " elixir, "
+                            << c.attack << " ATK, "
+                            << c.defense << " DEF, "
+                            << c.rarity << " " << c.emoji
+                            << ", " << c.role << ")\n";
+
+                std::cout << "\n=== Player 2 Deck ===\n";
+                for (const auto& c : player2Deck)
+                    std::cout << c.name << " (" << c.elixir << " elixir, "
+                            << c.attack << " ATK, "
+                            << c.defense << " DEF, "
+                            << c.rarity << " " << c.emoji
+                            << ", " << c.role << ")\n";
+
+                saveDeckToFile("draft_results.txt", player1Deck, "Player 1");
+                saveDeckToFile("draft_results.txt", player2Deck, "Player 2");
+
+                // Grade both decks
+                gradeDeckResults(player1Deck, "Player 1");
+                gradeDeckResults(player2Deck, "Player 2");
+
+                std::cout << "\nDraft complete! Results saved to draft_results.txt\n";
+
+                // Convert std::vector<Card> → Deck
+                Deck deck1, deck2;
+                for (const auto& c : player1Deck)
+                    deck1.addCard(Cards(c.elixir, c.health, c.attack, c.defense, c.name, c.emoji, c.role, c.rarity));
+                for (const auto& c : player2Deck)
+                    deck2.addCard(Cards(c.elixir, c.health, c.attack, c.defense, c.name, c.emoji, c.role, c.rarity));
+
+                DeckGrader grader;
+
+                // Calculate overall scores
+                double player1Score = grader.gradeDeck(deck1);
+                double player2Score = grader.gradeDeck(deck2);
+
+                // Show grading results
+                std::cout << "\n--- Player 1 Overall Deck Score: " << player1Score << " ---\n";
+                std::cout << "--- Player 2 Overall Deck Score: " << player2Score << " ---\n";
+
+                // Determine winner
+                if (player1Score > player2Score)
+                    std::cout << "\n🏆 Player 1 wins!\n";
+                else if (player2Score > player1Score)
+                    std::cout << "\n🏆 Player 2 wins!\n";
+                else
+                    std::cout << "\n🤝 It's a tie!\n";
+
+                std::cout << "\nDraft complete! Results saved to draft_results.txt\n";
+                pause();
+                break;
+            }
+
+            // ===== Exit =====
+            case 5:
+                std::cout << "Exiting...\n";
+                return;
+
+            default:
+                std::cout << "Invalid choice.\n";
+                pause();
+            }
     }
 }
 
 int main() {
-    CardList cards;
+    CardList cards; // Create a CardList object to hold all cards in the database
     mainMenu(cards);
+    /// Call the main menu function and pass the CardList object
+    // User can interact with cards database, manage cards, grade decks, or play triple draft
     return 0;
 }
