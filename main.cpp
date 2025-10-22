@@ -281,13 +281,13 @@ void mainMenu(CardList& CardListClass) {
                 double totalScore = grader.gradeDeck(myDeck);
                 std::cout << "Overall Deck Score: " << totalScore << "\n";
 
-                if (totalScore < 150)
+                if (totalScore < 50)
                     std::cout << "⭐️\n";
-                else if (totalScore < 175)
+                else if (totalScore < 100)
                     std::cout << "⭐️⭐️\n";
-                else if (totalScore < 200)
+                else if (totalScore < 150)
                     std::cout << "⭐️⭐️⭐️\n";
-                else if (totalScore < 225)
+                else if (totalScore < 200)
                     std::cout << "⭐️⭐️⭐️⭐️\n";
                 else
                     std::cout << "⭐️⭐️⭐️⭐️⭐️\n";
@@ -295,6 +295,54 @@ void mainMenu(CardList& CardListClass) {
                 pause();
                 break;
             }
+
+            // case 4
+case 4: {
+    clearScreen();
+    srand(static_cast<unsigned int>(time(0)));
+
+    std::vector<Card> allCards = loadCardsFromFile("cards.txt");
+    if (allCards.empty()) {
+        std::cerr << "No cards loaded. Check your cards.txt file.\n";
+        pause();
+        break;
+    }
+
+    std::vector<Card> availableCards = selectRandomCards(allCards, 30);
+
+    std::cout << "\n=== Welcome to Two-Player Triple Draft (8 cards each) ===\n";
+
+    std::vector<Card> player1Deck = playerDraft(availableCards, "Player 1");
+    std::vector<Card> player2Deck = playerDraft(availableCards, "Player 2");
+
+    std::cout << "\n=== Player 1 Deck ===\n";
+    for (const auto& c : player1Deck)
+        std::cout << c.name << " (" << c.elixir << " elixir, "
+                  << c.attack << " ATK, "
+                  << c.defense << " DEF, "
+                  << c.rarity << " " << c.emoji
+                  << ", " << c.role << ")\n";
+
+    std::cout << "\n=== Player 2 Deck ===\n";
+    for (const auto& c : player2Deck)
+        std::cout << c.name << " (" << c.elixir << " elixir, "
+                  << c.attack << " ATK, "
+                  << c.defense << " DEF, "
+                  << c.rarity << " " << c.emoji
+                  << ", " << c.role << ")\n";
+
+    saveDeckToFile("draft_results.txt", player1Deck, "Player 1");
+    saveDeckToFile("draft_results.txt", player2Deck, "Player 2");
+
+    // Grade both decks
+    gradeDeckResults(player1Deck, "Player 1");
+    gradeDeckResults(player2Deck, "Player 2");
+
+    std::cout << "\nDraft complete! Results saved to draft_results.txt\n";
+    pause();
+    break;
+}
+
                 // ===== Exit =====
                 case 5:
                     std::cout << "Exiting...\n";
