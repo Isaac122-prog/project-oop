@@ -260,7 +260,6 @@ void mainMenu(CardList& CardListClass) {
                     Cards selectedCard(0, 0, 0, 0, "", "", "", "");
                     if (cardList.findCardByName(cardName, selectedCard)) {
                         myDeck.addCard(selectedCard);
-                        std::cout << cardName << " added to deck.\n";
                     } else {
                         std::cout << "Card not found. Try again.\n";
                         --i;
@@ -281,13 +280,13 @@ void mainMenu(CardList& CardListClass) {
                 double totalScore = grader.gradeDeck(myDeck);
                 std::cout << "Overall Deck Score: " << totalScore << "\n";
 
-                if (totalScore < 50)
+                if (totalScore < 150)
                     std::cout << "⭐️\n";
-                else if (totalScore < 100)
+                else if (totalScore < 175)
                     std::cout << "⭐️⭐️\n";
-                else if (totalScore < 150)
+                else if (totalScore < 100)
                     std::cout << "⭐️⭐️⭐️\n";
-                else if (totalScore < 200)
+                else if (totalScore < 225)
                     std::cout << "⭐️⭐️⭐️⭐️\n";
                 else
                     std::cout << "⭐️⭐️⭐️⭐️⭐️\n";
