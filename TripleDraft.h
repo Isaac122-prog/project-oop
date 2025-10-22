@@ -7,6 +7,7 @@
 struct Card {
     std::string name;
     int elixir;
+    int health;
     int attack;
     int defense;
     std::string rarity;
@@ -25,5 +26,8 @@ std::vector<Card> playerDraft(std::vector<Card>& availableCards, const std::stri
 
 // Save drafted decks to file
 void saveDeckToFile(const std::string& filename, const std::vector<Card>& deck, const std::string& playerName);
+
+// Grades a drafted deck using DeckGrader
+void gradeDeckResults(const std::vector<Card>& draftedDeck, const std::string& playerName);
 
 #endif // TRIPLEDRAFT_H
