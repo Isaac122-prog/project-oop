@@ -1,6 +1,8 @@
 #include <iostream>
 #include "DeckGrader.h"
 
+// Deckgrader Constructor
+// Scoring system for each role
 DeckGrader::DeckGrader(){
     roleScores = {
         {"WinCon",       {{0,5},{1,10},{2,7},{3,5},{4,3},{5,0},{6,-3},{7,-5},{8,-10}}},
@@ -15,20 +17,22 @@ DeckGrader::DeckGrader(){
     };
 }
 
+// Calculate average elixir cost of deck
 double DeckGrader::getAvgElixir(const Deck& deck){
-    const auto&cards = deck.getCards();
+    const auto&cards = deck.getCards(); // get all cards
     if (cards.empty()){
         return 0.0;
     }
     double totalElixir = 0;
     for (const auto& c : cards){
-        totalElixir = totalElixir + c.getCardElixir();
+        totalElixir = totalElixir + c.getCardElixir(); // sum up elixir costs
     }
     double avgElixir = 0;
     avgElixir = totalElixir/8; 
     return avgElixir;
 }
 
+// Computes overall grade 
 double DeckGrader::gradeDeck(const Deck& deck){
 
     double balanceScore = gradeBalance(deck);
@@ -36,10 +40,11 @@ double DeckGrader::gradeDeck(const Deck& deck){
     double defenseScore = gradeDefense(deck);
 
     double overallScore = 0;
-    overallScore = (attackScore + defenseScore)*balanceScore/100;
+    overallScore = (attackScore + defenseScore)*balanceScore/100; // weighted combination
     return overallScore;
 }
 
+// Computes attacking grade
 double DeckGrader::gradeAttack(const Deck& deck){
     double elixir = getAvgElixir(deck);
     const auto& cards = deck.getCards();
@@ -54,6 +59,7 @@ double DeckGrader::gradeAttack(const Deck& deck){
     return attack;
 }
 
+// Computes defensive grade
 double DeckGrader::gradeDefense(const Deck& deck){
     double elixir = getAvgElixir(deck);
     const auto& cards = deck.getCards();
@@ -68,6 +74,7 @@ double DeckGrader::gradeDefense(const Deck& deck){
     return defense;
 }
 
+// Computes strength grade
 double DeckGrader::gradeStrength(const Deck& deck) {
     double elixir = getAvgElixir(deck);
     const auto& cards = deck.getCards();
@@ -82,15 +89,18 @@ double DeckGrader::gradeStrength(const Deck& deck) {
     return strength;
 }
 
+// Computes balance of deck
 double DeckGrader::gradeBalance(const Deck& deck) {
     std::unordered_map<std::string, int> roleCount;
     
+    // Count how many cards exist for each role
     for (const auto& card : deck.getCards()) {
         roleCount[card.getCardRole()]++;
     }
 
     double balanceScore = 0;
 
+    // Iterate over each role and calculate score based on the number of cards
     for (auto it = roleScores.begin(); it != roleScores.end(); ++it) {
         const std::string& role = it->first;
         auto& roleMap = it->second;
@@ -101,8 +111,9 @@ double DeckGrader::gradeBalance(const Deck& deck) {
 
         int score = 0;
         if (roleMap.count(count))
-            score = roleMap[count];
+            score = roleMap[count]; // Use defined score
         else {
+            // If count exceeds defined map, use score of max count
             int maxCount = 0, lastScore = 0;
             for (auto rit = roleMap.begin(); rit != roleMap.end(); ++rit) {
                 if (rit->first > maxCount) {
@@ -113,9 +124,10 @@ double DeckGrader::gradeBalance(const Deck& deck) {
             score = lastScore;
         }
 
-        balanceScore += score;
+        balanceScore += score; // add score for this role
     }
 
+    // normalise as percentage
     double balance = balanceScore / 90.0 * 100.0;
     return balance;
 }

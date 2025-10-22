@@ -4,8 +4,10 @@
 #include <string>
 #include "Deck.h"
 
+// Deckgrading class
 class DeckGrader{
     private:
+        // Maps each card role to a map of card count → score for grading decks
         std::unordered_map<std::string, std::unordered_map<int, int>> roleScores;
     public:
         DeckGrader();

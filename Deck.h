@@ -5,9 +5,11 @@
 #include <string>
 #include "Cards.h"
 
+// Deck class
 class Deck{
 
 private:
+    // stores all cards in the deck
     std::vector<Cards> deckList;
 
 public:
