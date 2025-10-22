@@ -298,8 +298,10 @@ void mainMenu(CardList& CardListClass) {
             // case 4
 case 4: {
     clearScreen();
+    // randomised
     srand(static_cast<unsigned int>(time(0)));
 
+//load cards
     std::vector<Card> allCards = loadCardsFromFile("cards.txt");
     if (allCards.empty()) {
         std::cerr << "No cards loaded. Check your cards.txt file.\n";
