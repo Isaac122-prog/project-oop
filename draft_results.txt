@@ -1,0 +1,60 @@
+
+=== Player 1 Deck ===
+DarkPrince (4 Elixir, 70Health, 65 Attack, 50 Defence, Epic MiniTank, MiniTank)
+Knight (3 Elixir, 70Health, 35 Attack, 45 Defence, Common MiniTank, MiniTank)
+IceSpirit (1 Elixir, 15Health, 15 Attack, 35 Defence, Common Distraction, Distraction)
+Tesla (4 Elixir, 60Health, 10 Attack, 65 Defence, Common Building, AntiTank)
+Rocket (6 Elixir, 0Health, 85 Attack, 85 Defence, Rare BigSpell, BigSpell)
+BossBandit (6 Elixir, 85Health, 85 Attack, 60 Defence, Legendary HeavyTank, TankSupport)
+Minions (3 Elixir, 30Health, 30 Attack, 40 Defence, Common CheapAntiAir, CheapAntiAir)
+SkeletonArmy (3 Elixir, 20Health, 40 Attack, 50 Defence, Epic Distraction, Distraction)
+
+=== Player 2 Deck ===
+Valkyrie (4 Elixir, 75Health, 50 Attack, 70 Defence, Rare MiniTank, MiniTank)
+Royal Giant (6 Elixir, 100Health, 90 Attack, 30 Defence, Common WinCon, WinCon)
+Giant (5 Elixir, 120Health, 80 Attack, 30 Defence, Rare WinCon, WinCon)
+Firecracker (3 Elixir, 35Health, 50 Attack, 35 Defence, Common CheapAntiAir, CheapAntiAir)
+Witch (5 Elixir, 60Health, 75 Attack, 75 Defence, Epic AntiAir, AntiAir)
+Princess (3 Elixir, 30Health, 35 Attack, 35 Defence, Legendary CheapAntiAir, CheapAntiAir)
+GoblinGang (3 Elixir, 30Health, 45 Attack, 45 Defence, Common Distraction, Distraction)
+DartGoblin (3 Elixir, 30Health, 45 Attack, 45 Defence, Rare CheapAntiAir, CheapAntiAir)
+
+=== Player 1 Deck ===
+Rocket (6 Elixir, 0Health, 85 Attack, 85 Defence, Rare BigSpell, BigSpell)
+HogRider (4 Elixir, 70Health, 80 Attack, 20 Defence, Rare WinCon, WinCon)
+Bomber (2 Elixir, 30Health, 30 Attack, 40 Defence, Common Distraction, TankSupport)
+Tornado (3 Elixir, 0Health, 30 Attack, 50 Defence, Epic SmallSpell, SmallSpell)
+RoyalGhost (3 Elixir, 50Health, 40 Attack, 35 Defence, Legendary MiniTank, MiniTank)
+BombTower (4 Elixir, 65Health, 15 Attack, 65 Defence, Rare Building, AntiTank)
+Giant (5 Elixir, 120Health, 80 Attack, 30 Defence, Rare WinCon, WinCon)
+Bandit (3 Elixir, 45Health, 45 Attack, 30 Defence, Legendary MiniTank, TankSupport)
+
+=== Player 2 Deck ===
+SkeletonArmy (3 Elixir, 20Health, 40 Attack, 50 Defence, Epic Distraction, Distraction)
+InfernoDragon (4 Elixir, 60Health, 50 Attack, 70 Defence, Legendary AntiAir, AntiAir)
+Balloon (5 Elixir, 60Health, 100 Attack, 40 Defence, Epic WinCon, WinCon)
+Tesla (4 Elixir, 60Health, 10 Attack, 65 Defence, Common Building, AntiTank)
+Lumberjack (4 Elixir, 65Health, 75 Attack, 50 Defence, Legendary HeavyTank, AntiTank)
+EliteBarbarians (6 Elixir, 75Health, 80 Attack, 75 Defence, Common HeavyTank, AntiTank)
+IceSpirit (1 Elixir, 15Health, 15 Attack, 35 Defence, Common Distraction, Distraction)
+Wizard (5 Elixir, 50Health, 70 Attack, 80 Defence, Rare AntiAir, AntiAir)
+
+=== Player 1 Deck ===
+LavaHound (7 Elixir, 120Health, 80 Attack, 60 Defence, Legendary WinCon, WinCon)
+BombTower (4 Elixir, 65Health, 15 Attack, 65 Defence, Rare Building, AntiTank)
+IceWizard (3 Elixir, 40Health, 15 Attack, 55 Defence, Legendary CheapAntiAir, CheapAntiAir)
+IceSpirit (1 Elixir, 15Health, 15 Attack, 35 Defence, Common Distraction, Distraction)
+Freeze (4 Elixir, 0Health, 70 Attack, 50 Defence, Epic BigSpell, BigSpell)
+Minions (3 Elixir, 30Health, 30 Attack, 40 Defence, Common CheapAntiAir, CheapAntiAir)
+RoyalHogs (5 Elixir, 70Health, 80 Attack, 40 Defence, Rare WinCon, WinCon)
+Golem (8 Elixir, 150Health, 110 Attack, 50 Defence, Epic WinCon, WinCon)
+
+=== Player 2 Deck ===
+Prince (5 Elixir, 75Health, 75 Attack, 70 Defence, Epic HeavyTank, MiniTank)
+SpearGoblins (2 Elixir, 25Health, 30 Attack, 30 Defence, Common CheapAntiAir, CheapAntiAir)
+MagicArcher (4 Elixir, 40Health, 70 Attack, 60 Defence, Legendary AntiAir, AntiAir)
+TheLog (2 Elixir, 0Health, 25 Attack, 35 Defence, Legendary SmallSpell, SmallSpell)
+Guards (3 Elixir, 40Health, 35 Attack, 50 Defence, Epic Distraction, Distraction)
+Lightning (6 Elixir, 0Health, 90 Attack, 70 Defence, Epic BigSpell, BigSpell)
+Graveyard (5 Elixir, 30Health, 90 Attack, 60 Defence, Legendary WinCon, WinCon)
+MegaKnight (7 Elixir, 110Health, 90 Attack, 80 Defence, Legendary HeavyTank, HeavyTank)
