@@ -273,12 +273,16 @@ void mainMenu(CardList& CardListClass) {
                     }
                 }
 
+
                 std::cout << "\n--- Deck Contents ---\n";
                 myDeck.displayDeck();
-
+                
+                // create deckgrader object to grade deck
                 DeckGrader grader;
                 std::cout << std::fixed << std::setprecision(1);
                 std::cout << "\n--- Deck Grading ---\n";
+
+                // prints metrics of deck through grading class
                 std::cout << "Average Elixir: " << grader.getAvgElixir(myDeck) << "\n";
                 std::cout << "Balance Score: " << grader.gradeBalance(myDeck) << "\n";
                 std::cout << "Attack Score: " << grader.gradeAttack(myDeck) << "\n";
@@ -287,6 +291,7 @@ void mainMenu(CardList& CardListClass) {
                 double totalScore = grader.gradeDeck(myDeck);
                 std::cout << "Overall Deck Score: " << totalScore << "\n";
 
+                // display visual rating for overall score
                 if (totalScore < 150)
                     std::cout << "⭐️\n";
                 else if (totalScore < 175)
