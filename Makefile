@@ -1,5 +1,3 @@
-# ===== Simple Makefile for your game =====
-
 # Compiler
 CXX = g++
 CXXFLAGS = -std=c++11 -Wall
@@ -8,7 +6,7 @@ CXXFLAGS = -std=c++11 -Wall
 TARGET = game
 
 # Source files
-SRC = main.cpp Cards.cpp CardList.cpp TripleDraft.cpp
+SRC = main.cpp Cards.cpp CardList.cpp TripleDraft.cpp DeckGrader.cpp Deck.cpp
 
 # Default target
 all: $(TARGET)

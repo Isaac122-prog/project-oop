@@ -6,9 +6,12 @@
 #include <ctime>
 #include <algorithm>
 #include <iomanip>
+#include "DeckGrader.h"
+#include "Deck.h"
+#include <iomanip>
 #include <random>
 
-// Load cards from your space-separated file
+// Load cards from your space separated file
 std::vector<Card> loadCardsFromFile(const std::string& filename) {
     std::vector<Card> cards;
     std::ifstream file(filename);
@@ -132,3 +135,49 @@ void saveDeckToFile(const std::string& filename, const std::vector<Card>& deck, 
             << c.attack << " Attack, " << c.defense << " Defence, " 
             << c.rarity << " " << c.emoji << ", " << c.role << ")\n";
 }
+
+void gradeDeckResults(const std::vector<Card>& draftedDeck, const std::string& playerName) {
+    Deck deck;
+
+    // Convert each Card struct to a Cards object for Deck
+    for (const auto& c : draftedDeck) {
+        Cards cardObj(
+            c.elixir,
+            c.health,
+            c.attack,
+            c.defense,
+            c.name,
+            c.emoji,   // ✅ Corrected: pass emoji here, not duplicate role
+            c.role,
+            c.rarity
+        );
+
+        deck.addCard(cardObj);
+    }
+
+    DeckGrader grader;
+    std::cout << std::fixed << std::setprecision(1);
+
+    std::cout << "\n--- " << playerName << " Deck Grading ---\n";
+    std::cout << "Average Elixir: " << grader.getAvgElixir(deck) << "\n";
+    std::cout << "Balance Score: " << grader.gradeBalance(deck) << "\n";
+    std::cout << "Attack Score: " << grader.gradeAttack(deck) << "\n";
+    std::cout << "Defense Score: " << grader.gradeDefense(deck) << "\n";
+    std::cout << "Strength Score: " << grader.gradeStrength(deck) << "\n";
+
+    double totalScore = grader.gradeDeck(deck);
+    std::cout << "Overall Deck Score: " << totalScore << "\n";
+
+    // ⭐ Deck grading feedback
+    if (totalScore < 50)
+        std::cout << "⭐️\n";
+    else if (totalScore < 100)
+        std::cout << "⭐️⭐️\n";
+    else if (totalScore < 150)
+        std::cout << "⭐️⭐️⭐️\n";
+    else if (totalScore < 200)
+        std::cout << "⭐️⭐️⭐️⭐️\n";
+    else
+        std::cout << "⭐️⭐️⭐️⭐️⭐️\n";
+}
+

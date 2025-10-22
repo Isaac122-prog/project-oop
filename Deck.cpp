@@ -6,6 +6,7 @@ bool Deck::addCard(const Cards& card){
         std::cout << "Deck is full. Cannot add more cards.\n";
         return false;
     }
+    std::cout << std::endl;
     deckList.push_back(card);
     std::cout << card.getCardName() << " added to deck.\n";
     return true;
