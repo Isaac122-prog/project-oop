@@ -20,13 +20,14 @@ std::vector<Card> loadCardsFromFile(const std::string& filename) {
         return cards;
     }
 
+//reads through line by line
     std::string line;
     while (std::getline(file, line)) {
         if (line.empty()) continue;
 
         std::istringstream is(line);
         Card c;
-
+// puts in in the order
         is >> c.elixir >> c.health >> c.attack >> c.defense;
         is >> std::ws;
 
@@ -37,7 +38,7 @@ std::vector<Card> loadCardsFromFile(const std::string& filename) {
 
         if (parts.size() < 4) continue; // skip malformed lines
 
-        // The last three tokens are: role, emoji, rarity
+        // The last three are role, emoji, rarity
         c.rarity = parts.back(); parts.pop_back();
         c.emoji = parts.back(); parts.pop_back();
         c.role = parts.back(); parts.pop_back();
@@ -156,7 +157,7 @@ void gradeDeckResults(const std::vector<Card>& draftedDeck, const std::string& p
     }
 
     DeckGrader grader;
-    std::cout << std::fixed << std::setprecision(1);
+    std::cout << std::fixed << std::setprecision(1);// set to 1 decimal point
 
     std::cout << "\n--- " << playerName << " Deck Grading ---\n";
     std::cout << "Average Elixir: " << grader.getAvgElixir(deck) << "\n";
@@ -180,4 +181,3 @@ void gradeDeckResults(const std::vector<Card>& draftedDeck, const std::string& p
     else
         std::cout << "⭐️⭐️⭐️⭐️⭐️\n";
 }
-

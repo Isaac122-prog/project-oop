@@ -9,8 +9,9 @@
 #include <limits>
 
 int main() {
-    srand(static_cast<unsigned int>(time(0)));
+    srand(static_cast<unsigned int>(time(0))); //randomiser
 
+//loads cards from textfile
     std::vector<Card> allCards = loadCardsFromFile("cards.txt");
     if (allCards.empty()) {
         std::cerr << "No cards loaded. Check your cards.txt file.\n";
@@ -78,4 +79,3 @@ int main() {
     std::cout << "\nDraft complete! Results saved to draft_results.txt\n";
     return 0;
 }
-
