@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#include <iomanip>
+
 #include "Cards.h"
 
 Cards::Cards(int Elix, int He, int Att, int Def, const std::string& n, const std::string& T_Role, const std::string& r, const std::string& rare)
@@ -72,7 +74,7 @@ void Cards::display() const{
               << ", Attack: " << Attack
               << ", Defence: " << Defence 
               << ", Health: " << Health
-              << ", Triple Draft Role" << Trip_Role
+              << ", Triple Draft Role: " << Trip_Role
               << ", Role: " << Role
               << ", Rarity: " << Rarity << std::endl;
 }
