@@ -147,7 +147,7 @@ void gradeDeckResults(const std::vector<Card>& draftedDeck, const std::string& p
             c.attack,
             c.defense,
             c.name,
-            c.emoji,   // ✅ Corrected: pass emoji here, not duplicate role
+            c.emoji,
             c.role,
             c.rarity
         );
@@ -168,14 +168,14 @@ void gradeDeckResults(const std::vector<Card>& draftedDeck, const std::string& p
     double totalScore = grader.gradeDeck(deck);
     std::cout << "Overall Deck Score: " << totalScore << "\n";
 
-    // ⭐ Deck grading feedback
-    if (totalScore < 50)
+    // Deck grading feedback
+    if (totalScore < 150)
         std::cout << "⭐️\n";
-    else if (totalScore < 100)
+    else if (totalScore < 175)
         std::cout << "⭐️⭐️\n";
-    else if (totalScore < 150)
-        std::cout << "⭐️⭐️⭐️\n";
     else if (totalScore < 200)
+        std::cout << "⭐️⭐️⭐️\n";
+    else if (totalScore < 225)
         std::cout << "⭐️⭐️⭐️⭐️\n";
     else
         std::cout << "⭐️⭐️⭐️⭐️⭐️\n";
