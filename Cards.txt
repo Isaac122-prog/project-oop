@@ -1,13 +1,13 @@
 5 120 80 30 Giant WinCon WinCon Rare
-4 70 80 20 Hog Rider WinCon WinCon Rare
-5 70 80 40 Royal Hogs WinCon WinCon Rare
+4 70 80 20 HogRider WinCon WinCon Rare
+5 70 80 40 RoyalHogs WinCon WinCon Rare
 8 150 110 50 Golem WinCon WinCon Epic
 6 100 90 30 Royal Giant WinCon WinCon Common
-3 30 60 30 Goblin Barrel WinCon WinCon Epic
+3 30 60 30 GoblinBarrel WinCon WinCon Epic
 5 60 100 40 Balloon WinCon WinCon Epic
 5 30 90 60 Graveyard WinCon WinCon Legendary
-7 120 80 60 Lava Hound WinCon WinCon Legendary
-2 0 25 35 The Log SmallSpell SmallSpell Legendary
+7 120 80 60 LavaHound WinCon WinCon Legendary
+2 0 25 35 TheLog SmallSpell SmallSpell Legendary
 3 0 35 45 Arrows SmallSpell SmallSpell Common
 2 0 30 30 Zap SmallSpell SmallSpell Common
 2 0 30 30 Giant Snowball SmallSpell SmallSpell Common
@@ -25,48 +25,48 @@
 4 50 55 65 Electro Wizard AntiAir AntiAir Legendary
 4 55 50 70 Hunter AntiAir AntiAir Epic
 5 50 70 80 Wizard AntiAir AntiAir Rare
-4 60 60 60 Baby Dragon AntiAir AntiAir Epic
-4 60 50 70 Inferno Dragon AntiAir AntiAir Legendary
-4 40 70 60 Magic Archer AntiAir AntiAir Legendary
-3 30 45 45 Dart Goblin CheapAntiAir CheapAntiAir Rare
+4 60 60 60 BabyDragon AntiAir AntiAir Epic
+4 60 50 70 InfernoDragon AntiAir AntiAir Legendary
+4 40 70 60 MagicArcher AntiAir AntiAir Legendary
+3 30 45 45 DartGoblin CheapAntiAir CheapAntiAir Rare
 3 35 50 35 Firecracker CheapAntiAir CheapAntiAir Common
 3 35 35 40 Archers CheapAntiAir CheapAntiAir Common
-3 40 30 50 Mega Minion CheapAntiAir CheapAntiAir Rare
-2 25 30 30 Spear Goblins CheapAntiAir CheapAntiAir Common
+3 40 30 50 MegaMinion CheapAntiAir CheapAntiAir Rare
+2 25 30 30 SpearGoblins CheapAntiAir CheapAntiAir Common
 3 30 35 35 Princess CheapAntiAir CheapAntiAir Legendary
 2 15 30 35 Bats CheapAntiAir CheapAntiAir Common
 3 30 30 40 Minions CheapAntiAir CheapAntiAir Common
-3 40 15 55 Ice Wizard CheapAntiAir CheapAntiAir Legendary
-5 75 70 75 Cannon Cart TankSupport HeavyTank Epic
+3 40 15 55 IceWizard CheapAntiAir CheapAntiAir Legendary
+5 75 70 75 CannonCart TankSupport HeavyTank Epic
 3 45 45 30 Bandit TankSupport MiniTank Legendary
-6 85 85 60 Boss Bandit TankSupport HeavyTank Legendary
+6 85 85 60 BossBandit TankSupport HeavyTank Legendary
 5 80 60 80 Bowler TankSupport HeavyTank Epic
-7 110 90 80 Mega Knight HeavyTank HeavyTank Legendary
+7 110 90 80 MegaKnight HeavyTank HeavyTank Legendary
 2 30 30 40 Bomber TankSupport Distraction Common
-4 55 70 50 Night Witch AntiTank MiniTank Legendary
+4 55 70 50 NightWitch AntiTank MiniTank Legendary
 6 75 90 70 Sparky AntiTank HeavyTank Legendary
 7 100 80 100 PEKKA AntiTank HeavyTank Epic
-4 70 50 70 Mini PEKKA AntiTank HeavyTank Rare
-6 75 80 75 Elite Barbarians AntiTank HeavyTank Common
+4 70 50 70 MiniPEKKA AntiTank HeavyTank Rare
+6 75 80 75 EliteBarbarians AntiTank HeavyTank Common
 4 65 75 50 Lumberjack AntiTank HeavyTank Legendary
 5 70 50 75 Barbarians AntiTank HeavyTank Common
 3 50 10 50 Cannon AntiTank Building Common
 4 60 10 65 Tesla AntiTank Building Common
-4 65 15 65 Bomb Tower AntiTank Building Rare
-5 75 10 80 Inferno Tower AntiTank Building Rare
+4 65 15 65 BombTower AntiTank Building Rare
+5 75 10 80 InfernoTower AntiTank Building Rare
 5 75 75 70 Prince MiniTank HeavyTank Epic
-4 70 65 50 Dark Prince MiniTank MiniTank Epic
+4 70 65 50 DarkPrince MiniTank MiniTank Epic
 3 70 35 45 Knight MiniTank MiniTank Common
 4 75 50 70 Valkyrie MiniTank MiniTank Rare
 3 50 45 25 Miner MiniTank MiniTank Legendary
-2 70 15 35 Ice Golem MiniTank Distraction Rare
-3 50 40 35 Royal Ghost MiniTank MiniTank Legendary
+2 70 15 35 IceGolem MiniTank Distraction Rare
+3 50 40 35 RoyalGhost MiniTank MiniTank Legendary
 3 45 30 50 Fisherman MiniTank MiniTank Legendary
-3 30 45 45 Goblin Gang Distraction Distraction Common
+3 30 45 45 GoblinGang Distraction Distraction Common
 3 40 35 50 Guards Distraction Distraction Epic
 3 50 15 55 Tombstone Distraction Building Rare
 2 30 30 30 Goblins Distraction Distraction Common
-1 15 15 35 Ice Spirit Distraction Distraction Common
-1 15 25 25 Fire Spirit Distraction Distraction Common
-3 20 40 50 Skeleton Army Distraction Distraction Epic
+1 15 15 35 IceSpirit Distraction Distraction Common
+1 15 25 25 FireSpirit Distraction Distraction Common
+3 20 40 50 SkeletonArmy Distraction Distraction Epic
 1 10 20 30 Skeletons Distraction Distraction Common
