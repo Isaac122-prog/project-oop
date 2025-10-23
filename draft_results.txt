@@ -1,0 +1,36 @@
+========================================
+          TRIPLE DRAFT RESULTS          
+========================================
+
+PLAYER 1 DECK:
+-------------
+• Tesla (4 elixir, 10 ATK, 65 DEF, Common Building, AntiTank)
+• DartGoblin (3 elixir, 45 ATK, 45 DEF, Rare CheapAntiAir, CheapAntiAir)
+• Giant (5 elixir, 80 ATK, 30 DEF, Rare WinCon, WinCon)
+• Poison (4 elixir, 60 ATK, 60 DEF, Epic BigSpell, BigSpell)
+• NightWitch (4 elixir, 70 ATK, 50 DEF, Legendary MiniTank, AntiTank)
+• Bowler (5 elixir, 60 ATK, 80 DEF, Epic HeavyTank, TankSupport)
+• Zap (2 elixir, 30 ATK, 30 DEF, Common SmallSpell, SmallSpell)
+• Miner (3 elixir, 45 ATK, 25 DEF, Legendary MiniTank, MiniTank)
+Player 1 Score: 186.1
+
+PLAYER 2 DECK:
+-------------
+• HogRider (4 elixir, 80 ATK, 20 DEF, Rare WinCon, WinCon)
+• Barbarian (2 elixir, 30 ATK, 40 DEF, SmallSpell SmallSpell, Barrel)
+• DarkPrince (4 elixir, 65 ATK, 50 DEF, Epic MiniTank, MiniTank)
+• Knight (3 elixir, 35 ATK, 45 DEF, Common MiniTank, MiniTank)
+• Goblins (2 elixir, 30 ATK, 30 DEF, Common Distraction, Distraction)
+• MegaKnight (7 elixir, 90 ATK, 80 DEF, Legendary HeavyTank, HeavyTank)
+• Arrows (3 elixir, 35 ATK, 45 DEF, Common SmallSpell, SmallSpell)
+• Tesla (4 elixir, 10 ATK, 65 DEF, Common Building, AntiTank)
+Player 2 Score: 179.3
+
+========================================
+               FINAL RESULT             
+========================================
+ WINNER: PLAYER 1 
+Player 1 wins with 186.1 points vs Player 2's 179.3 points
+========================================
+
+Game completed on: Oct 23 2025 at 12:41:55
