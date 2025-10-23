@@ -9,7 +9,6 @@
 #include "TripleDraft.h"
 #include "DeckGrader.h"
 #include "Deck.h"
-#include "Card.h"
 
 // Function to clear the console screen got (from internet)
 void clearScreen() {
