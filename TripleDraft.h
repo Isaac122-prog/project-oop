@@ -3,31 +3,25 @@
 
 #include <vector>
 #include <string>
+#include "Cards.h"
+#include "Deck.h"
+#include "DeckGrader.h"
 
-struct Card {
-    std::string name;
-    int elixir;
-    int health;
-    int attack;
-    int defense;
-    std::string rarity;
-    std::string role;
-    std::string emoji;
+
+//TripleDraft class
+class TripleDraft {
+private:
+    std::vector<Cards> allCards;
+    std::vector<Cards> player1Deck;
+    std::vector<Cards> player2Deck;
+
+public:
+    void loadCardsFromFile(const std::string& filename);
+    void startDraft();
+    void displayDecks();
+    double gradeDeck(const std::vector<Cards>& deck, const std::string& playerName);
+    void displayFinalResults(double player1Score, double player2Score);
+    void saveCompleteResultsToFile(double player1Score, double player2Score);
 };
 
-// Load all cards from a column-separated file
-std::vector<Card> loadCardsFromFile(const std::string& filename);
-
-// Select n random cards from all available cards
-std::vector<Card> selectRandomCards(std::vector<Card>& allCards, int n);
-
-// Let a player draft 8 cards from available cards
-std::vector<Card> playerDraft(std::vector<Card>& availableCards, const std::string& playerName);
-
-// Save drafted decks to file
-void saveDeckToFile(const std::string& filename, const std::vector<Card>& deck, const std::string& playerName);
-
-// Grades a drafted deck using DeckGrader
-void gradeDeckResults(const std::vector<Card>& draftedDeck, const std::string& playerName);
-
-#endif // TRIPLEDRAFT_H
+#endif
