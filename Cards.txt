@@ -2,7 +2,7 @@
 4 70 80 20 HogRider WinCon WinCon Rare
 5 70 80 40 RoyalHogs WinCon WinCon Rare
 8 150 110 50 Golem WinCon WinCon Epic
-6 100 90 30 Royal Giant WinCon WinCon Common
+6 100 90 30 RoyalGiant WinCon WinCon Common
 3 30 60 30 GoblinBarrel WinCon WinCon Epic
 5 60 100 40 Balloon WinCon WinCon Epic
 5 30 90 60 Graveyard WinCon WinCon Legendary
@@ -12,7 +12,7 @@
 2 0 30 30 Zap SmallSpell SmallSpell Common
 2 0 30 30 Giant Snowball SmallSpell SmallSpell Common
 3 0 30 50 Tornado SmallSpell SmallSpell Epic
-2 20 30 40 Barbarian Barrel SmallSpell SmallSpell Epic
+2 20 30 40 BarbarianBarrel SmallSpell SmallSpell Epic
 4 0 65 55 Fireball BigSpell BigSpell Rare
 6 0 90 70 Lightning BigSpell BigSpell Epic
 3 0 60 20 Earthquake BigSpell BigSpell Rare
