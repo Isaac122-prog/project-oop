@@ -90,6 +90,7 @@ void TripleDraft::startDraft() {
 // display each deck
 void TripleDraft::displayDecks() {
     std::cout << "=== Player 1 Deck ===\n";
+    //applies following functions to the players deck
     for (const auto& card : player1Deck) {
         std::cout << card.getCardName() << " (" << card.getCardElixir() << " elixir, "
                   << card.getCardAttack() << " ATK, " << card.getCardDefence() << " DEF, "
