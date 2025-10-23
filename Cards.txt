@@ -22,7 +22,7 @@
 4 50 60 70 Musketeer AntiAir AntiAir Rare
 5 60 75 75 Witch AntiAir AntiAir Epic
 4 45 45 80 Zappies AntiAir AntiAir Rare
-4 50 55 65 Electro Wizard AntiAir AntiAir Legendary
+4 50 55 65 ElectroWizard AntiAir AntiAir Legendary
 4 55 50 70 Hunter AntiAir AntiAir Epic
 5 50 70 80 Wizard AntiAir AntiAir Rare
 4 60 60 60 BabyDragon AntiAir AntiAir Epic
